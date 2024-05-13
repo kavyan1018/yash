@@ -1,0 +1,368 @@
+Question 1:-
+-------------------
+arrange these classes of algorithms in increasing order of growth:
+
+(i) O(√n) - Square root growth
+(ii) O(n log n) - Linearithmic growth
+(iii) O(n2) - Quadratic growth
+(iv) O(n3) - Cubic growth
+
+So the correct order would be: (i), (ii), (iii), (iv).
+
+
+Question 1(B):-
+---------------------- in paper 
+
+Question 1(C):-
+----------------------
+
+Insertion Sort works by iteratively moving elements to their correct position, one at a time, within a growing sorted portion of the array.
+
+Here are the steps:
+
+1) Initial list: [28, 6, 29, 90, 5, 42, 80]
+
+2)We start with the second element (6) and compare it with the element before it (28). Since 6 is smaller, we swap them.
+List after 1st pass: [6, 28, 29, 90, 5, 42, 80]
+
+3)Next, we take the third element (29) and compare it with the elements before it. It's in the correct position.
+
+4)List after 2nd pass: [6, 28, 29, 90, 5, 42, 80]
+Fourth element (90) is already greater than all previous elements, so it stays in its place.
+
+5)List after 3rd pass: [6, 28, 29, 90, 5, 42, 80]
+Fifth element (5) is smaller than all previous elements, so it needs to be moved to the correct position.
+List after 4th pass: [5, 6, 28, 29, 90, 42, 80]
+
+6)Sixth element (42) needs to be moved to the correct position.
+List after 5th pass: [5, 6, 28, 29, 42, 90, 80]
+
+7)Finally, the seventh element (80) needs to be moved to the correct position.
+List after 6th pass: [5, 6, 28, 29, 42, 80, 90]
+So, the sorted list using Insertion Sort is: [5, 6, 28, 29, 42, 80, 90]. 
+
+
+
+---------------------
+Question 2(A):-
+---------------------
+the pseudocode for computing the Greatest Common Divisor (GCD) of two integers m and n using the Euclidean algorithm:
+
+function gcd(m, n):
+    while n ≠ 0:
+        remainder = m mod n
+        m = n
+        n = remainder
+    return m
+
+Time complexity of the Euclidean algorithm for finding the GCD is O(log(min(m, n))). This is because the algorithm reduces the problem size by at least half in each iteration until one of the numbers becomes zero, and the number of iterations is bounded by the number of digits in the smaller number. Therefore, the time complexity is logarithmic in the size of the smaller number.
+
+
+------------------
+Question 2(B):-
+------------------
+
+Here's the pseudocode for Breadth First Search (BFS) algorithm:
+
+function BFS(graph, start):
+
+    queue = empty queue
+
+    visited = empty set
+
+    enqueue(start, queue)
+
+    add start to visited
+
+    while queue is not empty:
+
+        current = dequeue(queue)
+
+        process(current)
+
+        for neighbor in neighbors(current, graph):
+
+            if neighbor not in visited:
+
+                add neighbor to visited
+
+                enqueue(neighbor, queue)
+
+
+Now, let's traverse the given graph using BFS starting from node A:
+
+Graph:
+A -> E, B
+E -> A, D
+B -> A, D, C
+D -> E, B, C
+C -> B, D, F
+F -> C
+
+Starting node: A
+
+// Initialize the queue and visited set
+queue = {A}
+visited = {A}
+
+// Process node A
+Process(A)
+
+// Enqueue neighbors of A: E, B
+queue = {E, B}
+
+// Process node E
+Process(E)
+
+// Enqueue neighbors of E: A, D
+queue = {B, D}
+
+// Process node B
+Process(B)
+
+// Enqueue neighbors of B: A, D, C
+queue = {D, C}
+
+// Process node D
+Process(D)
+
+// Enqueue neighbors of D: E, B, C
+queue = {C}
+
+// Process node C
+Process(C)
+
+// Enqueue neighbors of C: B, D, F
+queue = {F}
+
+// Process node F
+Process(F)
+
+// Queue is now empty, BFS traversal complete
+
+
+
+The order of traversal using BFS starting from node A is: A, E, B, D, C, F.
+
+
+------------------
+Question - 3(A):-
+------------------
+
+The Greedy Technique is an algorithmic paradigm that follows the problem-solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum solution. In other words, at every step, it selects the best available option without considering the consequences of this choice in the future steps. Greedy algorithms are often used for optimization problems where finding the best solution is equivalent to making a series of locally optimal choices.
+
+Here are the common types of problems that can be solved using the Greedy Technique:
+
+1)Activity Selection: Given a set of activities with start and finish times, the objective is to select the maximum number of non-overlapping activities that can be performed by a single person or machine.
+
+2)Fractional Knapsack Problem: Given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity, the objective is to fill the knapsack with items to maximize the total value of the items in the knapsack. Unlike the 0/1 knapsack problem, fractions of items can be taken.
+
+3)Minimum Spanning Tree (MST): Given a connected, undirected graph with weighted edges, the objective is to find a spanning tree of that graph which has the minimum possible total edge weight.
+
+4)Shortest Path: In certain scenarios, a greedy approach can be used to find the shortest path from one node to another in a graph. This is often applied in scenarios where all edge weights are non-negative.
+
+5)Huffman Coding: Given a set of characters and their frequencies of occurrence, the objective is to find the optimal binary prefix code (variable-length encoding) such that the overall encoding length of the characters is minimized.
+
+6)Coin Change Problem: Given a set of coin denominations and a target amount, the objective is to find the minimum number of coins needed to make up that amount.
+
+
+
+----------------------
+Question - 3(B):-
+----------------------
+
+Suppose we have an unsorted array: [38, 27, 43, 3, 9, 82, 10].
+
+We'll apply the Merge-Sort algorithm to sort this array in ascending order.
+
+--> Step 1: Divide
+We start by dividing the array into smaller subarrays recursively until each subarray has only one element.
+
+[38, 27, 43, 3, 9, 82, 10]   (Original array)
+[38, 27, 43, 3] | [9, 82, 10]   (Divide into two halves)
+[38, 27] | [43, 3] | [9] | [82, 10]   (Continue dividing)
+[38] | [27] | [43] | [3] | [9] | [82] | [10]   (Subarrays with one element)
+
+
+--> Step 2: Conquer
+Now, we merge the smaller subarrays back together while sorting them in the process.
+
+Starting with the subarrays with one element, we merge adjacent subarrays and sort them:
+
+[27, 38] | [3, 43] | [9] | [10, 82]   (Merge and sort adjacent subarrays)
+
+
+Then, we merge these merged subarrays:
+
+[3, 27, 38, 43] | [9, 10, 82]   (Merge and sort adjacent subarrays)
+
+ --> Finally, we merge these two subarrays to get the sorted array:
+
+[3, 9, 10, 27, 38, 43, 82]   (Merge and sort the remaining two subarrays)
+
+
+Now, the array is sorted in ascending order.
+
+Summary:
+Merge-Sort follows the divide-and-conquer strategy:
+
+Divide: The array is divided recursively into smaller subarrays until each subarray has only one element.
+
+Conquer: The smaller subarrays are merged back together while sorting them in the process.
+
+Merge-Sort is a stable sorting algorithm with a time complexity of O(n log n) in the worst-case scenario. It is widely used for sorting large datasets due to its efficiency and stability.
+
+
+----------------------
+Question - 4(A):-
+----------------------
+
+A single-source shortest path problem involves finding the shortest path from a single source vertex to all other vertices in a weighted graph. In other words, given a graph with weighted edges, the goal is to determine the shortest distance from a specified source vertex to every other vertex in the graph.
+
+The generic algorithm for solving the single-source shortest path problem is Dijkstra's algorithm, named after Dutch computer scientist Edsger W. Dijkstra. Here's a brief 
+
+explanation of the generic algorithm:
+
+1)Initialization: Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity. Maintain a priority queue (min heap) to keep track of vertices whose distance from the source is known but not finalized yet.
+
+2)Relaxation: Repeat the following steps until all vertices are processed:
+	-->Extract the vertex with the minimum distance (according to the priority queue) from the priority queue.
+	-->For each neighbor of the extracted vertex that has not been visited yet, update its distance from the source if a shorter path is found through the extracted 		       vertex. Update the priority queue accordingly.
+
+3)Termination: After processing all vertices, the distances to all vertices from the source vertex are finalized, and the shortest paths are determined.
+
+Dijkstra's algorithm guarantees the shortest path from the source vertex to every other vertex in the graph, given that the graph does not contain negative-weight edges. If negative-weight edges are present, Bellman-Ford algorithm is typically used instead.
+
+The time complexity of Dijkstra's algorithm using a binary heap implementation is O((V + E) log V), where V is the number of vertices and E is the number of edges in the graph. However, using more efficient data structures like Fibonacci heaps can reduce the time complexity to O(E + V log V).
+
+
+----------------------
+Question - 4(B):-
+----------------------
+
+(i) Complete Graph:
+
+A complete graph is a graph where every pair of distinct vertices is connected by a unique edge. In other words, in a complete graph, there is an edge between every pair of vertices. Complete graphs are denoted by the symbol 
+𝐾𝑛 , where 𝑛 represents the number of vertices.
+
+Example: 
+𝐾4  is a complete graph with 4 vertices. It looks like this:
+
+   A
+  / \
+ B---C
+  \ /
+   D
+
+In this example, every pair of distinct vertices (A, B), (A, C), (A, D), (B, C), (B, D), and (C, D) is connected by an edge, making it a complete graph.
+
+(ii) Dynamic Programming Technique:
+
+Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems and solving each subproblem only once. It is used when the problem can be divided into overlapping subproblems, allowing for efficient computation by storing the solutions to subproblems and reusing them when needed.
+
+Example: The classic example of dynamic programming is the Fibonacci sequence. Let's say we want to calculate the 𝑛𝑡ℎ Fibonacci number:
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+# Example usage
+print(fibonacci(5))  # Output: 5
+
+
+This simple recursive function calculates Fibonacci numbers, but it has an exponential time complexity because it recalculates the same Fibonacci numbers multiple times. Dynamic programming can optimize this by storing the results of previously calculated Fibonacci numbers and reusing them when needed:
+
+def fibonacci_dp(n):
+    fib = [0, 1]
+    for i in range(2, n+1):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib[n]
+
+# Example usage
+print(fibonacci_dp(5))  # Output: 5
+
+
+----------------------
+Question - 5(A):-
+----------------------
+
+To find the minimum cost spanning tree for the given graph using Kruskal's algorithm, we'll follow these steps:
+
+1)Sort all the edges in non-decreasing order of their weights.
+
+2) Start with an empty spanning tree.
+
+3)Iterate through all the edges in the sorted order, and for each edge:
+	-->If including the edge in the spanning tree doesn't form a cycle, add it to the spanning tree.
+
+4)Repeat step 3 until there are V−1 edges in the spanning tree, where 𝑉 is the number of vertices in the graph.
+
+Now, let's apply Kruskal's algorithm to the given graph:
+
+Given Graph:
+       A
+     /   \
+    B     C
+   /|\   /|\
+  D E F G H
+
+Step 1: Sort all the edges in non-decreasing order of their weights.
+
+AE: 2, BE: 2, GH: 3, BC: 3, CE: 3, BD: 4, CD: 4, DE: 4, EF: 5, AB: 5, FG: 5, FH: 6, AC: 6, EG: 6, AD: 9, EH: 9
+
+Step 2: Start with an empty spanning tree.
+
+Step 3: Iterate through all the edges in the sorted order, and for each edge, add it to the spanning tree if it doesn't form a cycle.
+
+
+AE: 2
+BE: 2   [A-B]
+GH: 3   [A-B, G-H]
+BC: 3   [A-B-C, G-H]
+CE: 3   [A-B-C-E, G-H]
+BD: 4   [A-B-C-E, G-H, B-D]
+CD: 4   [A-B-C-E-D, G-H, B-D]
+DE: 4   [A-B-C-E-D, G-H, B-D]
+EF: 5   [A-B-C-E-D, G-H, B-D, E-F]
+AB: 5   [A-B-C-E-D, G-H, B-D, E-F]
+FG: 5   [A-B-C-E-D, G-H, B-D, E-F, F-G]
+FH: 6   [A-B-C-E-D, G-H, B-D, E-F, F-G-H]
+AC: 6   [A-B-C-E-D, G-H, B-D, E-F, F-G-H]
+EG: 6   [A-B-C-E-D, G-H, B-D, E-F, F-G-H]
+AD: 9   [A-B-C-E-D, G-H, B-D, E-F, F-G-H]
+EH: 9   [A-B-C-E-D, G-H, B-D, E-F, F-G-H]
+
+
+Step 4: Repeat step 3 until there are 
+𝑉
+−
+1
+V−1 edges in the spanning tree.
+
+The minimum cost spanning tree for the given graph using Kruskal's algorithm is:
+
+A-B-C-E-D, G-H, B-D, E-F, F-G-H
+
+with a total cost of 2+3+3+3+4+5+5+6+6+9+9=55.
+
+
+------------------
+Question - 5(B)
+------------------
+
+A recurrence relation is a mathematical expression that defines a sequence recursively in terms of its previous terms. In other words, it describes how the value of a function or sequence at a given point depends on its value at previous points.
+
+For the factorial function 
+n!, the recurrence relation can be defined as follows:
+n!=n×(n−1)!
+
+This relation states that the factorial of a non-negative integer 𝑛 is equal to 𝑛 multiplied by the factorial of 
+n−1. This forms a recursive definition of the factorial function, where each term depends on the value of the factorial of a smaller number.
+
+The initial condition for the factorial function is the base case that stops the recursion. For the factorial function, the initial condition is: 
+0!=1
+
+This condition defines the factorial of 0 as 1. It serves as the base case because it is the smallest non-negative integer for which the factorial function is defined. Without this base case, the recursion would continue indefinitely, resulting in infinite recursion. Therefore, it's necessary to have an initial condition that stops the recursion and provides a starting point for the recursive computation of factorials.
+

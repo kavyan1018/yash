@@ -1,0 +1,82 @@
+question 1-D:-
+
+(d) DFS Traversal from node A:
+
+Depth-First Search (DFS) is a graph traversal algorithm that explores as far as possible along each branch before backtracking. Here's how you can perform DFS traversal from node A:
+
+Start at node A.
+Mark node A as visited.
+Recursively visit all adjacent nodes of A that are not yet visited, following each unvisited node in alphabetical order.
+Continue this process until all nodes reachable from A are visited.
+The DFS traversal sequence from node A depends on the adjacency of nodes in your graph. If you provide the adjacency information, I can help you derive the DFS traversal sequence.
+
+------------------------------------------------------------------------
+
+Question 2-A:-
+
+(a) Quick Sort:
+
+Quick Sort is a comparison-based sorting algorithm that follows the divide-and-conquer strategy. It partitions the array around a pivot element and recursively sorts the subarrays.
+
+Let's sort the given list {29, 6, 27, 8, 6, 2, 45, 90} using Quick Sort:
+
+Choose a pivot element. Let's choose the last element, 90, as the pivot.
+Partition the array around the pivot. Elements smaller than the pivot to its left and elements greater than the pivot to its right. After partitioning, the array may look like: {6, 27, 8, 6, 2, 29, 45, 90}.
+Now, recursively apply Quick Sort to the subarrays on the left and right of the pivot.
+Repeat the process until all subarrays are sorted.
+Intermediate Steps:
+
+Pivot: 90, Partition: {6, 27, 8, 6, 2, 29, 45, 90}
+Pivot: 45, Partition: {6, 27, 8, 6, 2, 29, 45}, {90}
+Pivot: 29, Partition: {6, 27, 8, 6, 2}, {29}, {45}
+Pivot: 27, Partition: {6, 8, 6, 2}, {27}, {29}, {45}
+Pivot: 8, Partition: {6, 6, 2}, {8}, {27}, {29}, {45}
+Pivot: 6, Partition: {2}, {6}, {6}, {8}, {27}, {29}, {45}
+Pivot: 6, Partition: {2}, {6}, {6}, {8}, {27}, {29}, {45}
+Sorted List: {2, 6, 6, 8, 27, 29, 45, 90}
+
+----------------------------------------------------------------------------
+
+Question 2-B:-
+
+(b) Optimization Problem:
+
+An optimization problem involves finding the best solution from all feasible solutions. The goal is to minimize or maximize an objective function while satisfying certain constraints.
+
+Examples:
+
+Travelling Salesman Problem (TSP): Given a list of cities and the distances between them, find the shortest possible route that visits each city exactly once and returns to the original city. Here, the objective is to minimize the total distance traveled.
+Knapsack Problem: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight does not exceed a given limit, and the total value is maximized. Here, the objective is to maximize the total value of items while not exceeding the weight capacity of the knapsack.
+
+
+
+
+
+Question 5-C
+
+
+There are several methods to solve recurrence relations, two of the most common are:
+
+
+(A)
+Substitution Method:
+
+In the substitution method, you make an educated guess about the form of the solution based on observation or intuition, and then use mathematical induction to prove the guess correct.
+	
+         -->The steps typically involve:
+Guessing the form of the solution.
+Proving the correctness of the guess by induction.
+This method works well for simple recurrence relations and often involves identifying patterns by examining small instances of the recurrence.
+
+(B)
+         -->Master Theorem:
+The Master Theorem provides a straightforward way to determine the time complexity of divide-and-conquer algorithms and recurrence relations of the form 
+
+T(n)=aT(n/b)+f(n).
+It states that if a recurrence relation satisfies certain conditions, then its solution can be determined without the need for induction or guesswork.
+The theorem has three cases, each corresponding to a different relationship between the parameters  f(n).
+
+
+By identifying the case that applies to a given recurrence relation, you can directly determine its time complexity.
+The Master Theorem is particularly useful for analyzing the time complexity of algorithms like merge sort, binary search, and many others.
+Both methods have their strengths and weaknesses, and the choice of which method to use depends on the complexity and structure of the recurrence relation. The Substitution Method is more flexible and can handle a wider range of recurrence relations, but it requires more intuition and guesswork. On the other hand, the Master Theorem provides a concise and systematic way to solve certain types of recurrence relations but is limited to specific forms.

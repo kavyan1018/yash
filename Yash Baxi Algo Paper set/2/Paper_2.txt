@@ -1,0 +1,395 @@
+------------------------
+Question 1_A:-
+------------------------
+(a) Arranging the growth rates in increasing order of running time:
+The growth rates provided are:
+
+O(3𝑛)
+O(𝑛3)
+O(n)
+𝑛!
+log(𝑛2)
+
+To arrange them in increasing order of running time, we need to consider their growth rates from slowest to fastest. 
+
+Here's the arrangement:
+𝑂(𝑛)<𝑂(𝑛3)<log(𝑛2)<𝑂(3𝑛)<𝑛!
+
+This arrangement is based on the typical hierarchy of growth rates. Linear growth (O(n)) is the slowest, followed by polynomial growth (𝑂(𝑛3)), then logarithmic growth (log(𝑛2)), exponential growth (𝑂(3𝑛)), and finally factorial growth  (𝑛!), which is the fastest.
+
+----------------------------------
+Question 1_B:-
+----------------------------------
+
+Merge sort is a divide-and-conquer algorithm used for sorting elements in an array. Here's how we define the recurrence relation and initial condition for merge sort:
+
+Recurrence Relation: In merge sort, we divide the array into halves recursively until we have subarrays of size 1 or 0. Then, we merge these subarrays in sorted order. The recurrence relation for merge sort can be expressed as follows:
+𝑇(𝑛)=2𝑇(𝑛2)+𝑂(𝑛)
+
+Here, 
+T(n) represents the time taken to sort an array of size n. The 2T(n/2)term represents the time taken to sort the two halves of the array recursively, and 
+O(n) represents the time taken to merge these sorted halves.
+
+Initial Condition: The initial condition for merge sort is the base case when the size of the array becomes 1 or 0. In this case, there is no need to sort further, so the time taken is constant, usually denoted as 0(1). Therefore, we can express the initial condition as:
+
+T(1)=O(1)
+
+This indicates that when the size of the array is 1, the time taken to sort it is constant, implying that no further division or merging is needed.
+
+
+
+-----------------------
+Question 1_C:-
+-----------------------
+
+
+The notation Ω :-
+Ω (omega) is used to denote the lower bound of a function. It represents a set of functions that grow at least as fast as the given function, up to a constant factor.
+
+Given two functions:
+
+f(n)=5n 3+5n2 +1
+𝑔(𝑛)=5𝑛2+5
+
+To show that, 
+f(n)=g(n), we need to prove that both functions have the same growth rate, and one way to do this is by showing that  f(n) is bounded below by  g(n) using the Ω notation.
+
+To prove this formally:
+
+We want to find constants c and 𝑛0 such that f(n)≥c⋅g(n) for all 𝑛 ≥ 𝑛0
+​
+f(n)=5n3+5n2+1
+
+Now, let's find the Ω relationship:
+f(n)=5n3+5n2 +1 
+≥5n2+5 (ignoring the lower-order terms)
+
+This implies that f(n) is bounded below by g(n) for sufficiently large values of  𝑛
+
+So, we can conclude that f(n)=Ω(g(n)), or in other words, f(n) grows at least as fast as g(n).
+
+Regarding the graph traversal:
+
+Given the graph and the instruction to traverse it using Depth First Search (DFS) with vertex A as the starting point, we follow these steps:
+
+1)Start at vertex A.
+2)Visit an adjacent unvisited vertex.
+3)Repeat step 2 until there are no unvisited adjacent vertices.
+4)Backtrack to the previous vertex and repeat step 2 until all vertices are visited.
+
+The sequence of vertices in the order of their discovery will depend on the specific layout of the graph and the implementation of the DFS algorithm. Without more information about the graph's structure, it's difficult to provide the exact sequence of vertices. However, based on the given options, if vertex D is adjacent to vertex A, it would likely be discovered early in the traversal. Similarly, if vertex H is connected to D, it would be discovered later.
+
+
+-------------------
+Question 1_D:-
+-------------------
+
+To show that 
+f(n)=g(n), we need to demonstrate that the functions f(n) and g(n) are equal for all values of  𝑛
+
+Given:
+f(n)=5n3+5n2 +1
+g(n)=5n 2+5
+
+We'll simplify f(n) to see if it matches g(n):
+f(n)=5n3 +5n2 +1 = 5n2 (n+1)+1
+
+From the given function 
+g(n) : g(n)=5n2 +5
+
+We can see that  f(n) doesn't match g(n) directly.
+
+However, let's consider 
+f(n)=g(n):
+5n 2 (n+1)+1=5n2+5
+
+Upon observation, we can see that there's no value of 𝑛 for which this equality holds. Hence, we can conclude that 
+f(n) is not equal to g(n).
+
+
+
+-------------------------
+Question 1_E(i):-
+-------------------------
+
+(i) Applying the linear search algorithm to search for the number 4 in the following list of integer numbers:
+List: 
+
+5,15,8,4,25,30,17,20
+
+The linear search algorithm works by sequentially checking each element of the list until the target element is found or the end of the list is reached.
+
+
+Starting three steps of the linear search algorithm for 
+4:
+
+Compare 4 with the first element 5 - not a match.
+Compare 4 with the second element 15 - not a match.
+Compare 4 with the third element 8 - not a match.
+
+----------
+(ii)
+----------
+Analyzing the worst-case complexity of the linear search algorithm:
+
+--> Worst-case complexity: In the worst-case scenario, the linear search algorithm has to traverse the entire list to find the target element or determine that it's not present.
+
+--> Time complexity: O(n), where 𝑛 is the number of elements in the list.
+
+--> Example of worst-case scenario: If the target element is not present in the list or is located at the end of the list, the algorithm will have to iterate through all 𝑛 elements, resulting in the worst-case time complexity.
+
+
+---------------
+Question 2:
+---------------
+
+Part-B --->
+
+
+Part (b)
+
+Bellman-Ford Algorithm:
+
+The Bellman-Ford algorithm is used to find the shortest paths from a single source vertex to all other vertices in a weighted graph, even if the graph contains negative weight edges. Here's the algorithm:
+
+1>Initialize distances from the source vertex to all vertices as infinite and distance to the source itself as 0.
+
+2> Relax all edges |V| - 1 times, where |V| is the number of vertices in the graph.
+
+3> If we still can reduce the distance, then the graph contains a negative weight cycle, and the algorithm won't work.
+Otherwise, the array dist[] of the shortest distances is calculated.
+
+Let's apply this algorithm to the given directed graph:
+
+A --7--> B
+^  /  |   ^
+| /   |   |
+3    6|   |10
+|     v   |
++--> D --2-> E
+
+
+Step 1: Initialize distances:
+A: 0
+B: ∞
+D: ∞
+E: ∞
+
+
+Step 2: Relax edges |V| - 1 = 4 - 1 = 3 times.
+
+Iteration 1:
+A -> B: 7
+A -> D: 3
+
+
+Iteration 2:
+B -> D: 6
+B -> E: 10
+
+Iteration 3:
+D -> E: 2
+
+After 3 iterations, the shortest distances are:
+A: 0
+B: 7
+D: 3
+E: 5
+
+
+Let's address each part of the question one by one:
+
+Part (b)
+
+Bellman-Ford Algorithm:
+
+The Bellman-Ford algorithm is used to find the shortest paths from a single source vertex to all other vertices in a weighted graph, even if the graph contains negative weight edges. Here's the algorithm:
+
+Initialize distances from the source vertex to all vertices as infinite and distance to the source itself as 0.
+Relax all edges |V| - 1 times, where |V| is the number of vertices in the graph.
+If we still can reduce the distance, then the graph contains a negative weight cycle, and the algorithm won't work.
+Otherwise, the array dist[] of the shortest distances is calculated.
+Let's apply this algorithm to the given directed graph:
+
+rust
+A --7--> B
+^  /  |   ^
+| /   |   |
+3    6|   |10
+|     v   |
++--> D --2-> E
+We start from vertex A.
+
+Step 1: Initialize distances:
+
+makefile
+A: 0
+B: ∞
+D: ∞
+E: ∞
+Step 2: Relax edges |V| - 1 = 4 - 1 = 3 times.
+
+Iteration 1:
+
+less
+A -> B: 7
+A -> D: 3
+Iteration 2:
+
+less
+B -> D: 6
+B -> E: 10
+Iteration 3:
+
+mathematica
+D -> E: 2
+
+After 3 iterations, the shortest distances are:
+makefile
+A: 0
+B: 7
+D: 3
+E: 5
+
+So, the shortest path from A to each vertex is:
+
+A to A: 0
+A to B: 7
+A to D: 3
+A to E: 5
+
+
+------------------
+Question 3:
+------------------
+---------------
+Part - A
+---------------
+For the values of n=1 and n=4, calculate 𝑛 log 
+For n=1:
+
+n log n = 1 × log1 = 0
+
+For n=4:
+𝑛 logn = 4 × log4 = 4 × 2 = 8
+
+
+---------------
+Part - B
+---------------
+Fractional Knapsack Problem:
+
+The fractional knapsack problem involves a knapsack (or backpack) with a certain capacity and a set of items, each with a weight and a value. The goal is to determine the maximum value that can be obtained by selecting fractions of items to be placed in the knapsack, without exceeding the capacity of the knapsack.
+
+Given:
+
+Number of objects n=5
+
+Capacity of knapsack M=13
+
+Weights of objects: P1=12, P2=32, P3=40, P4=30, P5=50
+
+We can solve this using a greedy algorithm. Let's sort the objects by their value-to-weight ratio:
+
+
+Object    Weight    Value    Value/Weight
+   1                 12                8                    8/12
+   4                 30                3                    3/30
+   2                 32              32                32/32
+   3                 40              40                40/40
+   5                 50              50               50/50
+
+
+Now, we start selecting objects greedily based on their value-to-weight ratio until the knapsack is full:
+
+1) Select Object 5: M=13−50=−37 (negative means overfilled)
+2) Select Object 3: M=−37+40=3
+3) Select Object 2: M=3−32=−29
+4) Select Object 4: M=−29+30=1
+5) Select Fraction of Object 1: M=1−1.0×12=−11
+
+So, the optimal solution is to select Object 5, Object 3, Object 2, Object 4, and a fraction of Object 1.
+
+
+
+------------------
+Question 4:
+------------------
+
+----------------------
+Part - A
+----------------------
+
+
+Subpart (a): Binary Search Algorithm
+
+Binary search is a search algorithm that finds the position of a target value within a sorted array. It works by repeatedly dividing in half the portion of the list that could contain the target value. Here's how to apply it to search for a key value of 23 in the given list:
+
+Given list: 5 69 13 15 23 27 35 45
+
+1)) Start with the entire list.
+
+2)) Compare the key value (23) with the middle element (15).
+
+3)) Since 23 > 15, the key must be in the right half.
+
+4))Repeat the process with the right half of the list: 23 27 35 45
+
+5))Compare the key value (23) with the middle element (27).
+
+6))Since 23 < 27, the key must be in the left half.
+
+7))Repeat the process with the left half of the list: 23
+
+8))The key value 23 is found at position 4.
+
+So, the binary search algorithm found the key value 23 at position 4 in the list.
+
+
+
+------------
+Part-B
+------------
+
+Subpart (b): Worst Case Analysis of Binary Search
+
+Worst-case time complexity of binary search is O(logn), where 𝑛 is the number of elements in the list. This is because the algorithm halves the search space in each step.
+
+Worst Case Example:
+Let's consider an example where the key value is not present in the list. For instance, if we're searching for 70 in the list:
+
+Given list: 5 13 15 23 27 35 45 69
+
+1)) In each step, the search area is halved.
+
+2)) After a few steps, the search area will be reduced to an empty list, and the algorithm concludes that the key is not present.
+
+In this scenario, the worst-case time complexity is reached because the algorithm needs to iterate over the entire list before concluding that the key is not present.
+
+
+
+
+------------------
+Question 5:
+------------------
+
+----------------------
+Part - A
+----------------------
+
+
+Subpart (a): Karatsuba's Method for Multiplication
+
+Karatsuba's algorithm is a fast multiplication algorithm that uses a divide-and-conquer approach. It reduces the multiplication of two 𝑛-digit numbers to three multiplications of n/2-digit numbers, along with some additional additions and subtractions. Let's apply it to multiply 2376201 and 219237:
+
+Break down both numbers into two halves: a=2376, b=201, c=219, d=237.
+Calculate ac, bd, and (a+b)(c+d).
+Compute (a+b)(c+d)−ac−bd.
+Combine the results to get the final product.
+
+
+----------------------
+Part - B
+----------------------
+
+in photo....... (Send to Yash)

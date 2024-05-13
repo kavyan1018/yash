@@ -1,0 +1,406 @@
+Question - 1
+------------------
+True. O(n log n) is indeed better than O(n^2), but it's not as efficient as O(n).
+
+
+Question - 1(B)
+------------------
+
+θ - Theta
+Ω - Omega
+ν - Nu
+Ε - Epsilon
+
+
+Question - 1(C) --> in paper hand written 
+------------------
+
+Question - 1(D)
+------------------
+
+To create an adjacency matrix for the given graph, we need to represent the connections between the vertices. Assuming the vertices are A, B, C, D, E, F, and G, and the connections are as follows:
+
+A is connected to B, C, and F.
+B is connected to A and G.
+C is connected to A and D.
+D is connected to C.
+E is not connected to any other vertex.
+F is connected to A.
+G is connected to B.
+
+The adjacency matrix will have rows and columns corresponding to each vertex. The value at row i and column j represents whether there is an edge from vertex i to vertex j.
+
+So, based on the connections described above, the adjacency matrix would look like this:
+
+    A   B   C   D   E   F   G
+A   0   1   1   0   0   1   0
+B   1   0   0   0   0   0   1
+C   1   0   0   1   0   0   0
+D   0   0   1   0   0   0   0
+E   0   0   0   0   0   0   0
+F   1   0   0   0   0   0   0
+G   0   1   0   0   0   0   0
+
+Here, a '1' indicates that there's a connection between the corresponding vertices, and a '0' indicates no connection.
+
+
+Question - 1(E)
+------------------
+
+
+To multiply two numbers using Karatsuba's method, we break each number into two parts, and then recursively compute the products of those parts. Let's go through the steps to multiply 10056 and 2037 using Karatsuba's method:
+
+Step 1: Break the numbers into two parts:
+a=100,  b=56 
+c=20,  d=37
+Step 2: Compute the following products:
+
+ac
+bd
+(a+b)(c+d)
+Step 3: Calculate the final result using the formula:
+ac×104 +((a+b)(c+d)−ac−bd)×102+bd
+
+Let's compute it step by step:
+
+Compute ac :
+ac = 100 × 20 = 2000
+Compute bd:
+𝑏𝑑 = 56 × 37 = 2072
+
+Compute (a+b)(c+d):
+(a+b)(c+d)=(100+56)(20+37)=156×57=8892
+
+Calculate ac×104 :
+2000 × 104 = 20000000
+
+Calculate bd:
+2072
+
+Calculate 
+
+(a+b)(c+d)−ac−bd:8892−2000−2072=4820
+
+Calculate (a+b)(c+d)−ac−bd multiplied by 102 :
+
+4820 × 102 = 482000
+
+Add up the results:
+
+20000000+482000+2072=20482072
+
+So, 10056 × 2037 = 20482072.
+
+--------------------
+Question - 1(f)
+--------------------
+
+generating functions.
+
+1) Iteration Method:
+
+--> The iteration method involves expanding the recurrence relation iteratively until a pattern emerges.
+
+--> You start with the base case(s) and then use the recurrence relation to generate subsequent terms.
+
+--> By observing the pattern in the generated terms, you can conjecture a closed-form solution.
+
+--> The iteration method is straightforward and intuitive, making it suitable for simple recurrence relations.
+
+--> For example, consider the recurrence relation T(n)=T(n−1)+n. By expanding the terms iteratively, you can observe a pattern and conjecture that T(n)= n(n+1)/2.
+
+2) Generating Functions:
+
+--> Generating functions provide a powerful tool for solving recurrence relations by converting them into algebraic equations.
+
+--> A generating function is a formal power series whose coefficients represent the terms of the sequence defined by the recurrence relation.
+
+--> By manipulating the generating function algebraically, you can solve for its closed-form expression.
+
+--> Generating functions are particularly useful for solving linear recurrence relations with constant coefficients.
+
+-->For example, consider the recurrence relation T(n)=2T(n−1)+3n. By defining a generating function G(x)=∑ and converting the recurrence relation into an equation involving G(x), you can solve for G(x) and then extract the coefficients to find T(n).
+
+
+These two approaches offer different perspectives and techniques for solving recurrence relations, catering to various complexities and types of relations encountered in algorithm analysis and discrete mathematics.
+
+--------------------
+Question - 2(A)
+--------------------
+
+
+1) O(2n) - Exponential growth, where the function doubles with each unit increase in input size.
+
+2) O(n3) - Cubic growth, where the function grows with the cube of the input size.
+
+3) n-Square root growth, where the function grows at a slower rate compared to linear growth.
+
+4)𝑛! - Factorial growth, where the function grows very rapidly with the factorial of the input size.
+
+So, arranging them in increasing order:
+
+n<O(n3)<O(2 n)<n!
+
+
+--------------------
+Question - 2(B)---(i)
+--------------------
+
+To traverse the given graph using Breadth-First Search (BFS) starting from node A, we'll explore all the neighbors of each node at the current level before moving to the next level. Here's how it's done:
+
+1. Start at node A.
+2. Visit node A and enqueue its neighbors.
+3. Dequeue node A and visit its neighbor B.
+4. Enqueue the neighbors of B.
+5. Dequeue B and visit its neighbor D.
+6. Enqueue the neighbors of D.
+7. Dequeue D and visit its neighbor C.
+8. Enqueue the neighbors of C.
+9. Dequeue C and visit its neighbor E.
+10. Enqueue the neighbors of E.
+11. Dequeue E and visit its neighbor F.
+12. Enqueue the neighbors of F.
+
+Let's represent this process step by step:
+
+Step 1: Start at A
+Queue: A
+Visited: A
+
+Step 2: Visit A's neighbors and enqueue them
+Queue: B
+Visited: A
+
+Step 3: Dequeue A and visit its neighbor B
+Queue: (empty)
+Visited: A, B
+
+Step 4: Enqueue B's neighbors
+Queue: D
+Visited: A, B
+
+Step 5: Dequeue B and visit its neighbor D
+Queue: (empty)
+Visited: A, B, D
+
+Step 6: Enqueue D's neighbors
+Queue: C
+Visited: A, B, D
+
+Step 7: Dequeue D and visit its neighbor C
+Queue: (empty)
+Visited: A, B, D, C
+
+Step 8: Enqueue C's neighbors
+Queue: E
+Visited: A, B, D, C
+
+Step 9: Dequeue C and visit its neighbor E
+Queue: (empty)
+Visited: A, B, D, C, E
+
+Step 10: Enqueue E's neighbors
+Queue: F
+Visited: A, B, D, C, E
+
+Step 11: Dequeue E and visit its neighbor F
+Queue: (empty)
+Visited: A, B, D, C, E, F
+
+Step 12: Enqueue F's neighbors (none)
+Queue: (empty)
+Visited: A, B, D, C, E, F
+
+So, the BFS traversal starting from node A results in the order: A, B, D, C, E, F.
+
+
+--------------------
+Question - 2(B)---(ii)
+--------------------
+
+The complexity analysis of the Breadth-First Search (BFS) algorithm involves considering both time complexity and space complexity.
+
+Time Complexity:
+In BFS, each vertex and each edge of the graph are visited exactly once. Let \( V \) be the number of vertices (nodes) and ( E ) be the number of edges in the graph.
+
+- Visiting each vertex takes ( O(1) ) time.
+- Considering each edge of the vertex takes ( O(1) ) time.
+
+So, the time complexity of BFS is ( O(V + E) ).
+
+Space Complexity:
+BFS uses a queue data structure to keep track of the vertices to visit. At any point in time, the queue can hold at most ( V ) vertices. Additionally, a boolean array may be used to mark visited vertices.
+
+- The space required for the queue is ( O(V) ).
+- The space required for the boolean array to mark visited vertices is ( O(V) ).
+
+So, the overall space complexity of BFS is ( O(V) ).
+
+In summary:
+- Time Complexity: ( O(V + E) )
+- Space Complexity: ( O(V) )
+
+
+--------------------
+Question - 3(A)
+--------------------
+Quick sort is a popular sorting algorithm that follows the divide and conquer strategy. It works as follows:
+
+1. **Divide**: Choose a pivot element from the array. Partition the array into two sub-arrays such that elements less than the pivot are on the left side, and elements greater than the pivot are on the right side.
+2. **Conquer**: Recursively apply quick sort to the left and right sub-arrays.
+3. **Combine**: No combine step is needed as the arrays are sorted in place.
+
+Here's how quick sort works on the given list of numbers:
+
+List: 15 10 5 4 25 35 7 8
+
+Step 1: Choose a pivot element (let's choose the last element, 8 in this case).
+- Pivot: 8
+- Partition the array into two sub-arrays:
+  - Left sub-array (elements <= pivot): 5 4 7
+  - Right sub-array (elements > pivot): 15 10 25 35
+
+Step 2: Recursively apply quick sort to the left and right sub-arrays.
+- Left sub-array: 5 4 7
+  - Pivot: 7
+  - Partition the left sub-array into:
+    - Left sub-array: 5 4
+    - Right sub-array: (empty)
+- Right sub-array: 15 10 25 35
+  - Pivot: 35
+  - Partition the right sub-array into:
+    - Left sub-array: 15 10 25
+    - Right sub-array: (empty)
+
+Step 3: Combine the sorted sub-arrays.
+- Left sub-array: 4 5 7
+- Right sub-array: 10 15 25 35
+
+The sorted list is obtained by concatenating the left sub-array, pivot, and right sub-array:
+4 5 7 8 10 15 25 35
+
+This completes the sorting process using the quick sort algorithm.
+
+--------------------
+Question - 3(B)
+--------------------
+
+Backtracking is a problem-solving strategy that involves recursively trying out different solutions to a problem and backtracking when we reach a dead-end or find that the current solution is invalid. It is a systematic way of exploring all possible configurations or candidates to find the correct solution. Backtracking is often used for solving problems where there are multiple options at each step, and we need to make a series of decisions to reach the desired outcome.
+
+Two problems that can be solved by backtracking are:
+
+1. **N-Queens Problem**:
+   In the N-Queens problem, the task is to place N queens on an N×N chessboard in such a way that no two queens threaten each other. That is, no two queens can share the same row, column, or diagonal. Backtracking is used to explore all possible configurations of placing queens on the chessboard while ensuring that no two queens attack each other.
+
+2. **Sudoku Solver**:
+   Sudoku is a popular number puzzle where the objective is to fill a 9×9 grid with digits from 1 to 9, such that each column, each row, and each of the nine 3×3 subgrids (also known as regions or blocks) contains all of the digits from 1 to 9 without repetition. Backtracking is commonly employed to solve Sudoku puzzles by recursively trying out different numbers at each empty cell and backtracking when an invalid solution is encountered.
+
+
+--------------------
+Question - 4(A)
+--------------------
+
+The given recursive factorial function calculates the factorial of a non-negative integer \( n \). Let's write its recurrence relation.
+
+The function computes the factorial of \( n \) using the formula:
+\[ n! = n \times (n - 1)! \]
+
+Here's the recurrence relation for the given function:
+
+
+fact(n)={ 1                         if n=1
+        { n×fact(n−1)               otherwise
+​
+This recurrence relation defines the factorial function recursively, expressing the factorial of \( n \) in terms of the factorial of \( n - 1 \) until the base case (\( n = 1 \)) is reached.
+
+--------------------
+Question - 4(B)
+--------------------
+
+Horner's rule is a method for evaluating polynomials efficiently by reducing the number of arithmetic operations required. It states that a polynomial can be evaluated as follows:
+
+Given a polynomial ( p(x) = a_n x^n + a_{n-1} x^{n-1} + ldots + a1 x + a0 ), we can rewrite it in the following form:
+[ p(x) = (((ldots (a_n x + a_{n-1})x + a_{n-2})x + \ldots)x + a_1)x + a_0 ]
+
+We start with the leading coefficient ( an ), multiply it by ( x ), then add the next coefficient( a{n-1} ), and continue this process until we reach the constant term ( a0 ).
+
+Now, let's apply Horner's rule to evaluate the given polynomial ( p(x) = 6x^7 + 7x^6 + 5x^5 + 3x^3 + 6x^2 + 8x + 7 ) for a specific value of ( x ), say ( x = 2 ).
+
+Stepwise Iteration:
+
+1. Start with the constant term ( a7 = 6 ).
+2. Multiply by ( x ) and add the next coefficient ( a6 = 7 ):
+   ( 6 * 2 + 7 = 19 )
+3. Multiply by ( x ) and add the next coefficient ( a5 = 5 ):
+   ( 19 * 2 + 5 = 43 )
+4. Multiply by ( x ) and skip ( a4 ) since it's not present:
+   ( 43 * 2 = 86 )
+5. Multiply by ( x ) and add the next coefficient ( a3 = 3 ):
+   ( 86 * 2 + 3 = 175 )
+6. Multiply by ( x ) and add the next coefficient ( a2 = 6 ):
+   ( 175 * 2 + 6 = 356 )
+7. Multiply by ( x ) and skip ( a1 ) since it's not present:
+   ( 356 * 2 = 712 )
+8. Multiply by \( x ) and add the next coefficient ( a0 = 7 ):
+   ( 712 * 2 + 7 = 1431 )
+
+So, \( p(2) = 1431 \).
+
+
+--------------------
+Question - 5(A)
+--------------------
+
+In binary search, the number of comparisons needed depends on the number of elements in the sorted array and the search key being looked for. 
+
+For a set of \( n \) elements, binary search reduces the search space by half in each comparison. 
+
+Given that binary search operates on a sorted array and we're looking for an element, at most \( \log_2 n \) comparisons are needed. 
+
+For 64 elements:
+\[ \log_2 64 = 6 \]
+
+So, in a set of 64 elements, at most 6 comparisons are needed to find an element using binary search.
+
+--------------------
+Question - 5(B)
+--------------------
+
+Prim's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph with weighted edges. The MST is a subset of the edges of the graph that forms a tree containing all the vertices, where the sum of the weights of the edges is minimized.
+
+Here's how Prim's algorithm works:
+
+1. **Initialization**: Choose an arbitrary vertex to start the MST. Initialize a set \( S \) to store the vertices included in the MST and a priority queue (or a min-heap) to store candidate edges.
+   
+2. **Add Vertex**: Add the chosen starting vertex to \( S \).
+   
+3. **Grow Tree**: While \( S \) doesn't contain all vertices:
+   - For each vertex \( v \) in \( S \), consider all edges \( (v, u) \) where \( u \) is not in \( S \).
+   - Select the edge with the minimum weight among all such edges.
+   - Add the chosen edge \( (v, u) \) to the MST and the vertex \( u \) to \( S \).
+
+4. **Termination**: When \( S \) contains all vertices, the algorithm terminates.
+
+Now, let's write down the Prim's algorithm:
+
+Prim'sAlgorithm(G, w):
+1. Initialize an empty set S and a priority queue Q.
+2. Select an arbitrary vertex s as the starting vertex.
+3. Add vertex s to set S.
+4. For each vertex v in G:
+5.     If v is not equal to s, insert v into Q with key infinity.
+6.     If v is a neighbor of s, update the key of v in Q to the weight of edge (s, v).
+7. While Q is not empty:
+8.     Extract the vertex u with the minimum key from Q.
+9.     Add vertex u to set S.
+10.    For each neighbor v of u:
+11.        If v is in Q and the weight of edge (u, v) is less than the key of v:
+12.            Update the key of v in Q to the weight of edge (u, v).
+13. Return the set of edges in the minimum spanning tree formed by S.
+
+
+Explanation:
+- Steps 1-6: Initialize the algorithm, set up the data structures, and assign initial weights to vertices.
+- Steps 7-13: Iteratively select the vertex with the minimum key from the priority queue, update keys of adjacent vertices if necessary, and add vertices and corresponding edges to the MST until all vertices are included.
+
+Prim's algorithm guarantees to find the minimum spanning tree efficiently and is suitable for dense graphs or when the graph is represented using adjacency matrix.

@@ -1,0 +1,382 @@
+Question :- 1(A)
+----------------------------
+
+In the context of algorithmic analysis and running time, efficiency classes refer to the categorization of algorithms based on their performance characteristics. These classes help us understand how an algorithm's running time (or space usage) scales with the size of the input.
+
+Here are some basic efficiency classes commonly encountered:
+
+1) Constant Time (O(1)): Algorithms that have constant running time, meaning their execution time is independent of the size of the input. No matter how large the input is, the algorithm takes the same amount of time to complete.
+
+2) Logarithmic Time (O(log n)): Algorithms whose running time increases logarithmically with the size of the input. These algorithms are very efficient for large inputs. Examples include binary search on a sorted array or tree-based operations like searching in balanced binary search trees.
+
+3) Linear Time (O(n)): Algorithms with a running time that grows linearly with the size of the input. As the input size increases, the execution time increases proportionally. Examples include linear search and iteration through an array.
+
+4) Linearithmic Time (O(n log n)): Algorithms that exhibit a running time that is a product of linear and logarithmic growth rates. Many efficient sorting algorithms, such as merge sort and quicksort, fall into this category.
+
+5) Quadratic Time (O(n^2)): Algorithms whose running time grows quadratically with the size of the input. This means that as the input size increases, the execution time increases quadratically. Examples include algorithms with nested loops that iterate over every pair of elements in the input.
+
+6) Exponential Time (O(2^n)): Algorithms where the running time grows exponentially with the size of the input. These algorithms are generally considered inefficient and impractical for large inputs due to their rapid increase in execution time.
+
+
+Question :- 1(B)
+----------------------------
+
+Linear Search:
+Linear search involves iterating through the list sequentially until the target element is found or the end of the list is reached.
+
+Given list: 5, 7, 9, 12, 13, 15, 21, 25
+
+Step 1: Compare 5 with 15 (1 comparison)
+Step 2: Compare 7 with 15 (2 comparisons)
+Step 3: Compare 9 with 15 (3 comparisons)
+Step 4: Compare 12 with 15 (4 comparisons)
+Step 5: Compare 13 with 15 (5 comparisons)
+Step 6: Compare 15 with 15 (6 comparisons) - Found!
+
+
+Binary Search:
+Binary search involves repeatedly dividing the search interval in half until the target element is found or the interval is empty.
+
+Given sorted list: 5, 7, 9, 12, 13, 15, 21, 25
+
+Step 1: Compare middle element 12 with 15 (1 comparison), move to the right half
+Step 2: Compare middle element 15 with 15 (2 comparisons) - Found!
+
+
+The number of comparisons in binary search is 2.
+
+So, in this case, binary search is more efficient than linear search in terms of the number of comparisons required to find the number 15 in the given list.
+
+
+Question :- 1(C)
+----------------------------
+
+A recurrence relation is a way of defining a function in terms of its value at smaller inputs. In the context of algorithm analysis, recurrence relations are often used to describe the time complexity of algorithms that divide the problem into smaller subproblems.
+
+In mathematical terms, a recurrence relation defines a function T(n) in terms of its value at smaller inputs. It typically has two parts:
+
+1) Base Case: The base case defines the value of the function for the smallest inputs. It provides a termination condition for the recursion.
+2) Recursive Case: The recursive case defines the value of the function for larger inputs in terms of its value at smaller inputs.
+
+Now, let's define the recurrence relation T(n)=2T(n/2)+1.
+
+Base Case: T(1) (or any other base case if specified separately).
+
+Recursive Case: The function T(n) is defined in terms of  T(n/2), meaning it divides the problem into two subproblems of size n/2 each and recurses on them. The "+1" term accounts for the constant time operation performed at each level of recursion.
+
+
+    			            T(n)
+             			    /        \
+ 			T(n/2)       T(n/2)
+        			 /  \                 /      \
+                    T(n/4) T(n/4)  T(n/4) T(n/4)
+     			/  \     / \    / \    / \
+  		         T(n/8) T(n/8) ...  ...  ... T(n/8)
+   		      / \      / \                            / \
+		     ...   ...  ...     ...                         ... ...
+
+
+In the recurrence tree, each level represents a recursive call, with the size of the subproblem halving at each level until it reaches the base case. The total number of levels in the tree is 2𝑛log 2n, 
+
+where, 𝑛 is the size of the original problem. At each level, there is a constant overhead of 1 for the "+1" term in the recurrence relation. Therefore, the total number of nodes in the tree, and hence the total number of operations performed, is O(n).
+
+
+Question :- 1(D)
+----------------------------
+
+
+Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree of a connected, undirected graph. The minimum spanning tree of a graph is a subset of the edges that connects all the vertices together without any cycles and with the minimum possible total edge weight. Here's how Kruskal's algorithm works:
+
+1) Sort Edges: Sort all the edges in non-decreasing order of their weights.
+
+2)Initialize: Create an empty graph (minimum spanning tree) and initialize a set to keep track of vertices that have been included in the minimum spanning tree.
+
+3)Iterate through Edges: Starting from the edge with the smallest weight, iterate through all the edges.
+
+4)Check for Cycle: For each edge, if adding it to the minimum spanning tree does not form a cycle, add it to the minimum spanning tree.
+
+5) Repeat: Repeat steps 3 and 4 until the minimum spanning tree has V−1 edges, where 
+𝑉
+V is the number of vertices in the original graph.
+Now, let's apply Kruskal's algorithm to the given graph with vertices A, B, C, D, E, and F and their corresponding edges and weights:
+
+
+Graph:
+             A
+         /  /  \  \
+      6/   /9   \   \7
+      /   /       \  \
+     B - 2 - C - 4 - D
+      \   \       /   /
+      5\   \3   /   /7
+         \  \  /  /
+             F
+
+
+Starting vertex: A
+
+1) Sort edges by weight: (B, F), (B, E), (C, D), (D, E), (A, B), (C, E), (A, D).
+
+2) Initialize empty graph and set of vertices.
+
+3) Iterate through sorted edges:
+
+	-->Add (B, F) with weight 5. Resulting tree: (A, B, F).
+	-->Add (B, E) with weight 6. Resulting tree: (A, B, F, E).
+	-->Add (C, D) with weight 3. Resulting tree: (A, B, F, E, C, D).
+	-->Add (D, E) with weight 7. Resulting tree: (A, B, F, E, C, D).
+	-->Add (A, B) with weight 6. Resulting tree remains the same.
+	-->Add (C, E) with weight 9. Resulting tree remains the same.
+	-->Add (A, D) with weight 7. Resulting tree remains the same.
+
+
+The minimum spanning tree obtained using Kruskal's algorithm starting from vertex A is:
+
+   A
+ /   \
+B     F
+|      |
+E     D
+
+
+
+Question :- 2(A)
+-------------------------
+
+To arrange the given functions in increasing order, let's compare their growth rates:
+
+	log(n): Logarithmic growth rate.
+	nlog(n): Linearithmic growth rate.
+	n2: Quadratic growth rate.
+	5n+7: Linear growth rate.
+
+Now, let's arrange them in increasing order of their growth rates:
+
+1)log(n)
+2)5n+7
+3)nlog(n)
+4)n2
+
+This ordering reflects how the functions grow as n increases. Generally, logarithmic growth rates are the slowest, followed by linear, linearithmic, and then quadratic growth rates.
+
+
+Question :- 2(B)
+-------------------------
+
+Breadth-First Search (BFS) and Depth-First Search (DFS) are fundamental graph traversal algorithms that are widely used in various applications across different domains. Here are two applications for each:
+
+--> Breadth-First Search (BFS):
+
+1) Shortest Path and Distance Calculation: BFS can be used to find the shortest path between two nodes in an unweighted graph. By traversing the graph level by level, BFS guarantees that when a path is found, it is the shortest path. Additionally, BFS can be used to compute the distance of each node from a given source node in an unweighted graph.
+
+2) Minimum Spanning Tree (MST) Construction: BFS can be used to construct the Minimum Spanning Tree (MST) of a connected, undirected graph. By performing BFS on the graph starting from any vertex, we can obtain a spanning tree with the minimum number of edges that covers all the vertices without forming any cycles.
+
+
+--> Depth-First Search (DFS):
+
+1) Topological Sorting: DFS can be used to perform topological sorting of directed acyclic graphs (DAGs). Topological sorting arranges the vertices of a graph in a linear order such that for every directed edge u→v, vertex u comes before vertex 𝑣 in the ordering. This is useful in scheduling tasks that have dependencies.
+
+2) Detecting Cycles: DFS can be used to detect cycles in a graph. By maintaining a visited set and checking for back edges during the traversal, DFS can determine whether a graph contains cycles. This is useful in various applications such as deadlock detection in operating systems or cycle detection in resource allocation graphs.
+
+
+These applications demonstrate the versatility and usefulness of BFS and DFS in various scenarios, including network analysis, optimization problems, and algorithmic design.
+
+
+Question :- 2(C)
+-------------------------
+
+
+Binary exponentiation is a technique used to efficiently compute the power of a number. The left-to-right binary exponentiation algorithm is a variant of binary exponentiation that traverses the binary representation of the exponent from left to right. Here's the algorithm:
+
+Left-to-Right Binary Exponentiation Algorithm:
+
+1) Initialize result res to 1.
+
+2) Iterate through the binary representation of the exponent from left to right:
+	-->For each bit:
+		-->If the bit is 1, multiplyres by the base.
+		-->Square the base.
+3) Return res.
+
+
+Now, let's apply this algorithm to evaluate 𝑎280 where 𝑎 is the base.
+
+
+
+Example: Evaluating 𝑎280 :
+
+
+1) Convert 280 to binary: 280 = (100011000)2.
+
+2) Initialize result res to 1.
+
+3) Iterate through the binary representation of 280 from left to right:
+
+First bit is 1: Multiply 
+res
+res by 𝑎
+Square 𝑎.
+Second bit is 0: Do nothing.
+Square 𝑎
+Third bit is 0: Do nothing.
+Square 𝑎
+Fourth bit is 0: Do nothing.
+Square 𝑎
+
+Fifth bit is 1: Multiply res by 𝑎
+Square 𝑎
+
+4) Return res, which is the result of 𝑎280
+
+Now, let's illustrate the steps:
+
+1) res=1
+2)res=a
+3)res=a2
+4)res=a4
+5)res=a8
+6)res=a16
+7)res = a32
+8)res = a64
+9)res=a 128
+10)res=a 256
+11)res = 𝑎280
+
+The steps involve squaring the base when the corresponding bit in the binary representation of the exponent is 0 and multiplying res by the base when the corresponding bit is 1.
+
+
+
+Question :- 3(A)
+-----------------------
+
+in paper 
+
+
+
+Question :- 3(B)
+------------------------
+
+Dijkstra's algorithm is a popular algorithm for finding the shortest paths between nodes in a graph, but it relies on certain assumptions about the graph, particularly that all edge weights are non-negative. Here's why Dijkstra's algorithm may fail if edges can have negative weights:
+
+1) Greedy Property: Dijkstra's algorithm operates based on the greedy property, always selecting the vertex with the smallest known distance from the source vertex and relaxing its outgoing edges. This works effectively when all edge weights are non-negative because once a vertex is visited, its shortest path is determined and cannot be improved upon.
+
+2) Negative Weight Edges: If edges can have negative weights, the greedy property no longer holds. This is because a negative weight edge can potentially create a shorter path to a vertex that has already been visited. As a result, Dijkstra's algorithm may incorrectly select a shorter path through a vertex that has already been visited, leading to incorrect results.
+
+3) Cycle with Negative Weight: Additionally, negative weight edges can lead to cycles with negative weight. If there exists a cycle with negative weight reachable from the source vertex, the algorithm may get stuck in an infinite loop, continuously revising the shortest path and never terminating.
+
+4) No Longer Guaranteed Shortest Paths: Due to the presence of negative weight edges and the possibility of negative weight cycles, Dijkstra's algorithm may not guarantee finding the shortest paths in the presence of such edges. The algorithm may produce incorrect results or fail to terminate.
+
+
+To handle graphs with negative weight edges or negative weight cycles, other algorithms such as Bellman-Ford algorithm or Floyd-Warshall algorithm can be used. These algorithms are capable of handling negative weight edges and cycles by performing relaxation over multiple iterations and detecting negative cycles.
+
+
+Question :- 3(C)
+--------------------------
+
+To traverse the complete graph on four vertices using Breadth-First Search (BFS), we start from a chosen starting vertex and visit its neighbors level by level. Since the graph is complete, every vertex is connected to every other vertex. Let's denote the vertices as A, B, C, and D.
+
+Starting from any vertex, let's say A, the sequence of vertices visited by BFS will be:
+
+1) Visit A.
+2) Visit all neighbors of A, which are B, C, and D.
+3) Visit all neighbors of B, C, and D. Since the graph is complete, all remaining vertices will be visited at this level.
+4) Continue visiting vertices level by level until all vertices have been visited.
+
+The sequence of vertices visited by BFS traversal of the complete graph on four vertices starting from vertex A would be:
+
+A -> B -> C -> D
+
+In a complete graph, every vertex is directly connected to every other vertex, so the BFS traversal from any vertex will visit all other vertices in the graph.
+
+
+
+Question :- 4(A)
+---------------------------
+
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. In mathematical terms, the sequence is defined by the recurrence relation:
+
+F(n)=F(n−1)+F(n−2)
+
+with base cases:
+
+F(0)=0
+F(1)=1
+
+Here, 
+F(n) represents the n-th Fibonacci number. The recurrence relation states that to find the n-th Fibonacci number, we need to sum the (n−1)-th and (n−2)-th Fibonacci numbers.
+
+This recurrence relation forms the basis for computing Fibonacci numbers recursively. However, it's important to note that the naive recursive implementation of this recurrence relation has exponential time complexity, which can be highly inefficient for large values of 
+𝑛
+n. Memoization or dynamic programming techniques can be used to optimize the computation of Fibonacci numbers by avoiding redundant calculations.
+
+
+Question :- 4(B)
+-------------------------
+
+ let's apply the Merge Sort algorithm to sort the given list of integer numbers: 15, 8, 7, 4, 25, 30, 5, 13.
+
+Merge Sort is a divide-and-conquer algorithm that divides the list into smaller sublists, recursively sorts these sublists, and then merges them back together to produce a sorted list.
+
+Here are the steps:
+
+1) Divide: Divide the list into two halves.
+
+2) Conquer: Recursively sort each half.
+
+3) Merge: Merge the sorted halves to produce a single sorted list.
+
+
+Let's go through these steps:
+
+Step 1: Divide
+Divide the list into two halves:
+[15,8,7,4]and[25,30,5,13]
+
+Step 2: Conquer
+Recursively sort each half.
+For the left half:[15,8,7,4]
+Divide: [15,8]and[7,4]
+
+Recursively sort each half:
+[15]and[8]
+[15]and[8]
+
+
+For the right half:
+[25,30,5,13]
+
+Divide:[25,30]and[5,13]
+Recursively sort each half:
+[25]and[30]
+[5]and[13]
+
+
+Step 3: Merge
+
+Merge the sorted halves.
+
+For the left half:
+[15,8]
+
+Merge: 
+[8,15]
+
+For the right half:
+[25,30]
+
+Merge: 
+[25,30]
+
+For the full list:
+[8,15]and[5,13,25,30]
+
+Merge: 
+[5,8,13,15,25,30]
+
+So, the sorted list using Merge Sort is: 
+
+5,8,13,15,25,30
+
+
+
+Question 5 A and B Both in photos send to yash 

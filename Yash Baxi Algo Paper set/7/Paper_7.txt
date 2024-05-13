@@ -1,0 +1,323 @@
+Question - 1(A):-
+---------------------
+
+The complexity of an algorithm refers to how its resource requirements (such as time and space) grow as the size of the input data increases. There are two main aspects of algorithmic complexity:
+
+
+1) Time Complexity: Time complexity is a measure of the amount of time an algorithm takes to complete as a function of the length of its input. It provides an upper bound on the time required for an algorithm to run to completion. Time complexity is typically expressed using Big O notation, which describes the limiting behavior of a function as the input size approaches infinity.
+
+2) Space Complexity: Space complexity is a measure of the amount of memory an algorithm uses as a function of the length of its input. It provides an upper bound on the amount of memory required by an algorithm during its execution. Like time complexity, space complexity is often expressed using Big O notation.
+
+Let's illustrate both concepts with a simple example:
+
+Example: Finding the Maximum Element in an Array
+
+Suppose we have an array of integers and we want to find the maximum element in the array.
+
+def find_max(arr):
+    max_element = arr[0]
+    for element in arr:
+        if element > max_element:
+            max_element = element
+    return max_element
+
+Now, let's analyze the time and space complexity of this algorithm:
+
+Time Complexity:
+
+In the algorithm above, we iterate through each element of the array once, comparing it to the current maximum element. Therefore, the time complexity is O(n), where n is the number of elements in the array. This means that the time taken by the algorithm grows linearly with the size of the input array.
+
+
+Space Complexity:
+
+The algorithm uses a constant amount of extra space to store variables like max_element and element. Regardless of the size of the input array, the space complexity remains O(1), indicating that the amount of extra space used by the algorithm is independent of the size of the input.
+
+In summary, the time complexity of this algorithm is O(n) and the space complexity is O(1).
+
+
+
+Question 1(B):-
+----------------------------
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i 
+    return -1 
+
+Now, let's analyze the algorithm for its best and worst cases:
+
+Best Case Analysis:
+
+The best case scenario occurs when the target element is located at the beginning of the array. In this case, the algorithm will find the target after checking only one element. Therefore, the best case time complexity is O(1), indicating constant time complexity.
+
+Worst Case Analysis:
+
+The worst case scenario occurs when the target element is either not present in the array or is located at the end of the array. In this case, the algorithm will have to iterate through all elements of the array before determining that the target element is not present. Therefore, the worst case time complexity is O(n), where n is the number of elements in the array. This means that the time taken by the algorithm grows linearly with the size of the input array.
+
+In terms of space complexity, the linear search algorithm uses a constant amount of extra space regardless of the size of the input array. Therefore, the space complexity is O(1).
+
+So, in summary:
+
+Best Case Time Complexity: O(1)
+Worst Case Time Complexity: O(n)
+Space Complexity: O(1)
+
+
+Question 1(C):-
+-----------------------
+Ans in photos on yash whatsapp
+
+
+
+Question 1(D):-
+------------------------
+
+An adjacency matrix is a square matrix used to represent a finite graph. In this matrix, rows and columns represent vertices of the graph, and the presence or absence of an edge between two vertices is represented by the entries of the matrix.
+
+For an undirected graph with n vertices, the adjacency matrix is an n x n matrix where the element at row i and column j is 1 if there is an edge between vertices i and j, and 0 otherwise.
+
+Here's the adjacency matrix for the given graph:
+
+The graph:
+
+     A ----- B
+    /        |
+   E         |
+   |         |
+   |         |
+   D ------- F
+
+Adjacency matrix:
+
+
+   | A | B | C | D | E | F |
+---|---|---|---|---|---|---|
+ A | 0 | 1 | 0 | 0 | 0 | 0 |
+---|---|---|---|---|---|---|
+ B | 1 | 0 | 0 | 0 | 0 | 1 |
+---|---|---|---|---|---|---|
+ C | 0 | 0 | 0 | 0 | 0 | 0 |
+---|---|---|---|---|---|---|
+ D | 0 | 0 | 0 | 0 | 1 | 1 |
+---|---|---|---|---|---|---|
+ E | 0 | 0 | 0 | 1 | 0 | 0 |
+---|---|---|---|---|---|---|
+ F | 0 | 1 | 0 | 1 | 0 | 0 |
+---|---|---|---|---|---|---|
+
+
+In this matrix:
+
+Rows and columns represent the vertices A, B, C, D, E, F.
+A 1 in position (i, j) indicates there is an edge between vertex i and vertex j.
+A 0 indicates no edge between the corresponding vertices.
+
+
+Question 2(A):-
+-----------------------
+
+simple implementation of the Depth-First Search (DFS) algorithm in Python along with the traversal of the given graph starting from node A:
+
+# Define the graph as an adjacency list
+graph = {
+    'A': ['P', 'E'],
+    'P': ['A', 'E'],
+    'E': ['A', 'P', 'B', 'D'],
+    'B': ['E', 'D'],
+    'D': ['E', 'B', 'C', 'F'],
+    'C': ['D', 'F'],
+    'F': ['D', 'C']
+}
+
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)
+    print(start, end=" ")  # Print the current node
+
+    for neighbor in graph[start]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)
+
+
+print("DFS Traversal from node A:")
+dfs(graph, 'A')
+
+This DSA code defines the graph as an adjacency list and implements the DFS algorithm recursively. The dfs() function takes the graph, starting node, and a set of visited nodes as input parameters. It visits each node in the graph in depth-first order, marking visited nodes to avoid infinite loops.
+
+Here's the output of the DFS traversal starting from node A:
+
+DFS Traversal from node A:
+A P E B D C F 
+
+This output shows the nodes visited in depth-first order starting from node A: A, P, E, B, D, C, F.
+
+
+
+Question 2(B):-
+---------------------------
+Ans in photos on yash whatsapp
+
+
+
+
+Question 3(A):-
+----------------------------
+
+Kruskal's algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a connected, undirected graph. Here's how it works:
+
+1) Sort all the edges in non-decreasing order of their weights.
+2) Pick the smallest edge. Check if including it in the MST causes a cycle in the MST formed so far. If it doesn't, include it.
+3) Repeat step 2 until there are (V-1) edges in the MST, where V is the number of vertices.
+
+Now let's apply Kruskal's algorithm to the given graph:
+
+Graph:
+     A --4-- B
+    / \     |
+   3   5    2
+  /     \   |
+ E       D  |
+ |        \ |
+  \       / 6
+   8    /   |
+    \  /    |
+     F ---- 4
+
+
+Step 1: Sort all the edges based on their weights:
+
+1.EF (weight 8)
+2.FD (weight 2)
+3.AE (weight 3)
+4.AB (weight 4)
+5.BF (weight 4)
+6.DE (weight 5)
+7.AF (weight 6)
+
+Step 2: Start picking edges from the sorted list, avoiding cycles.
+
+Start with the smallest edge, FD (weight 2).
+Next smallest is AE (weight 3).
+Then AB (weight 4).
+Then EF (weight 8).
+
+We have now formed a spanning tree with 4 edges, which is the minimum spanning tree for the given graph.
+
+The Minimum Cost Spanning Tree (MCST) using Kruskal's algorithm is:
+
+   A --3-- E
+  /       /
+ /       /
+B --4-- D
+ \     /
+  \   /
+   \ /
+    F
+
+So, the MCST consists of the edges: FD (weight 2), AE (weight 3), AB (weight 4), and EF (weight 8).
+
+
+Question 3(B):-
+----------------------------
+
+
+Big O notation (O) is a mathematical notation used in computer science to describe the performance or complexity of an algorithm. It provides an upper bound on the growth rate of the algorithm's time or space requirements as the size of the input data increases.
+
+The main use of Big O notation in the analysis of algorithms is to classify algorithms based on their efficiency and scalability. It helps in comparing different algorithms and understanding how their performance changes with input size.
+
+For example, let's consider two sorting algorithms: Bubble Sort and Merge Sort.
+
+Bubble Sort:
+	1.Best-case time complexity: O(n)
+	2.Average-case time complexity: O(n^2)
+	3.Worst-case time complexity: O(n^2)
+
+Merge Sort:
+	1.Best-case time complexity: O(n log n)
+	2.Average-case time complexity: O(n log n)
+	3.Worst-case time complexity: O(n log n)
+
+From the above, we can see that Merge Sort has better time complexity than Bubble Sort. This means that as the size of the input data increases, Merge Sort's performance degrades at a slower rate compared to Bubble Sort. In terms of scalability, Merge Sort is more efficient for large datasets.
+
+In summary, Big O notation helps us understand the efficiency and scalability of algorithms by providing a standardized way to express their performance characteristics. It allows us to make informed decisions when choosing algorithms for different tasks and helps in optimizing code for better performance.
+
+
+Question 4(B):-
+---------------------
+
+(i) Upper Bound:
+
+In algorithm analysis, an upper bound represents the maximum amount of resources (such as time or space) that an algorithm may consume under certain conditions. It provides an estimation of the worst-case scenario for the algorithm's performance.
+
+Example: Consider the problem of searching for an element in an array using linear search. The upper bound on the time complexity of linear search is O(n), where n is the number of elements in the array. This means that in the worst-case scenario, where the element is not present in the array or is located at the end, the algorithm will have to iterate through all n elements before determining that the target element is not present.
+
+
+(ii) Backtracking:
+
+Backtracking is a technique used in algorithm design to systematically search for solutions to a problem by incrementally building candidates and abandoning a candidate ("backtracking") as soon as it is determined that it cannot lead to a valid solution.
+
+Example: The classic example of backtracking is the "N-Queens" problem, where the task is to place N chess queens on an N×N chessboard in such a way that no two queens threaten each other. Backtracking can be used to systematically try different arrangements of queens on the board. If a queen can't be placed in a valid position, the algorithm backtracks to the previous state and tries a different position. This process continues until a valid solution is found or all possibilities are exhausted.
+
+
+Question 5(A):-
+--------------------
+
+the Bubble Sort algorithm to sort the given list step by step:
+
+Original list: 30, 8, 7, 14, 20, 28, 10, 6
+
+Step 1:
+Compare adjacent elements and swap if they are in the wrong order:
+
+30 and 8: (30, 8, 7, 14, 20, 28, 10, 6)
+30 and 7: (8, 30, 7, 14, 20, 28, 10, 6)
+30 and 14: (8, 7, 30, 14, 20, 28, 10, 6)
+30 and 20: (8, 7, 14, 30, 20, 28, 10, 6)
+30 and 28: (8, 7, 14, 20, 30, 28, 10, 6)
+30 and 10: (8, 7, 14, 20, 28, 30, 10, 6)
+30 and 6: (8, 7, 14, 20, 28, 10, 30, 6)
+Step 2:
+Repeat the process for the remaining elements:
+
+8 and 7: (8, 7, 14, 20, 28, 10, 30, 6)
+14 and 7: (8, 7, 14, 20, 28, 10, 30, 6)
+14 and 20: (8, 7, 14, 20, 28, 10, 30, 6)
+20 and 28: (8, 7, 14, 20, 28, 10, 30, 6)
+28 and 10: (8, 7, 14, 20, 10, 28, 30, 6)
+28 and 6: (8, 7, 14, 20, 10, 28, 6, 30)
+Step 3:
+Continue the process until no more swaps are needed:
+
+8 and 7: (7, 8, 14, 20, 10, 28, 6, 30)
+14 and 20: (7, 8, 14, 20, 10, 28, 6, 30)
+20 and 10: (7, 8, 14, 10, 20, 28, 6, 30)
+28 and 6: (7, 8, 14, 10, 20, 6, 28, 30)
+Step 4:
+No more swaps are needed. The list is sorted:
+Final sorted list: 7, 8, 14, 10, 20, 6, 28, 30
+
+This is the step-by-step process of sorting the given list using the Bubble Sort algorithm.
+
+
+
+Question 5(B):-
+--------------------
+Algorithm: AddMatrices(A, B)
+Input: Two matrices A and B of order mxn
+Output: Matrix C, the sum of matrices A and B
+
+1. Initialize an empty matrix C of the same order as A and B.
+2. For i = 1 to m:
+     For j = 1 to n:
+         C[i][j] = A[i][j] + B[i][j]
+3. Return matrix C.
+
+Now, let's analyze the time complexity of this algorithm:
+
+Step 1: No significant computation is performed in this step, so its time complexity is O(1).
+Step 2: This step involves two nested loops iterating over each element of the matrices A and B. Since there are m×n elements in each matrix, the time complexity of this step is O(mn).
+Step 3: Returning the matrix C involves no significant computation, so its time complexity is O(1).
+Therefore, the overall time complexity of adding two matrices of order m×n using this algorithm is O(mn).
+
