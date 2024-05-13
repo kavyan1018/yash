@@ -1,0 +1,150 @@
+--------------------
+Question - 1(A)
+--------------------
+
+Big Theta (Θ) notation is used to describe the asymptotic behavior of functions. It provides tight bounds on the growth rate of a function, both from above and below.
+
+A function f(n) is said to be Θ(g(n)) if and only if there exist positive constants 𝑐1,𝑐2, and 𝑛0 such that:
+
+c1⋅g(n)≤f(n)≤c2⋅g(n)
+
+for all𝑛 ≥ 𝑛0.
+
+Now, let's use this definition to show that 7𝑛2+8n−9=Θ(n2).
+
+We need to find constants 𝑐1,𝑐2, and 𝑛0such that:
+
+c1.n2 <= 7n2 + 8n - 9 <= c2.n2 
+
+for all 𝑛 ≥ 𝑛0.
+
+Let's first find an upper bound:
+
+7𝑛2 + 8𝑛 − 9 ≤ 7𝑛2 + 8𝑛2 + 9𝑛2 
+7𝑛2 + 8𝑛 − 9 ≤ 24𝑛2
+
+
+So, we can choose 
+𝑐2 = 24 and 𝑛0 = 1
+
+Now, let's find a lower bound:
+
+7𝑛2 + 8𝑛 − 9 ≥ 7𝑛2 − 8𝑛2 −9𝑛2
+ 
+7𝑛2 + 8𝑛 − 9 ≥ -10𝑛2 
+
+So, we can choose 𝑐1 = 1 and 𝑛0 = 1.
+
+Therefore, 7𝑛2+8n−9=Θ(n2).
+
+--------------------
+Question - 1(B)
+--------------------
+
+Sure, let's apply the Bubble Sort algorithm to sort the given list of numbers: 15 8 7 11 25 13 12 4.
+
+Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the list is sorted.
+
+Step-by-step procedure:
+
+1. **Initial List**: 15 8 7 11 25 13 12 4
+2. **Pass 1**:
+   - Compare 15 and 8: Swap (15 > 8)
+   - Compare 15 and 7: Swap (15 > 7)
+   - Compare 15 and 11: No Swap (15 < 11)
+   - Compare 15 and 25: No Swap (15 < 25)
+   - Compare 25 and 13: Swap (25 > 13)
+   - Compare 25 and 12: Swap (25 > 12)
+   - Compare 25 and 4: Swap (25 > 4)
+   **List after Pass 1**: 8 7 11 15 13 12 4 25
+   Number of exchanges in Pass 1: 5
+   Number of comparisons in Pass 1: 7
+3. **Pass 2**:
+   - Compare 8 and 7: Swap (8 > 7)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 15: No Swap (11 < 15)
+   - Compare 15 and 13: Swap (15 > 13)
+   - Compare 15 and 12: Swap (15 > 12)
+   - Compare 15 and 4: Swap (15 > 4)
+   **List after Pass 2**: 7 8 11 13 12 4 15 25
+   Number of exchanges in Pass 2: 4
+   Number of comparisons in Pass 2: 6
+4. **Pass 3**:
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 13: No Swap (11 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   - Compare 15 and 12: Swap (15 > 12)
+   - Compare 15 and 4: Swap (15 > 4)
+   **List after Pass 3**: 7 8 11 12 4 13 15 25
+   Number of exchanges in Pass 3: 2
+   Number of comparisons in Pass 3: 5
+5. **Pass 4**:
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   - Compare 15 and 4: Swap (15 > 4)
+   **List after Pass 4**: 7 8 11 12 4 13 15 25
+   Number of exchanges in Pass 4: 1
+   Number of comparisons in Pass 4: 5
+6. **Pass 5**:
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 4: Swap (12 > 4)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   **List after Pass 5**: 7 8 11 4 12 13 15 25
+   Number of exchanges in Pass 5: 1
+   Number of comparisons in Pass 5: 5
+7. **Pass 6**:
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 4: Swap (11 > 4)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   **List after Pass 6**: 7 8 4 11 12 13 15 25
+   Number of exchanges in Pass 6: 1
+   Number of comparisons in Pass 6: 5
+8. **Pass 7**:
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 4: Swap (8 > 4)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   **List after Pass 7**: 7 4 8 11 12 13 15 25
+   Number of exchanges in Pass 7: 1
+   Number of comparisons in Pass 7: 5
+
+9. **Pass 8**:
+   - Compare 7 and 4: Swap (7 > 4)
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   **List after Pass 8**: 4 7 8 11 12 13 15 25
+   Number of exchanges in Pass 8: 1
+   Number of comparisons in Pass 8: 5
+
+10. **Pass 9**:
+   - Compare 4 and 7: No Swap (4 < 7)
+   - Compare 7 and 8: No Swap (7 < 8)
+   - Compare 8 and 11: No Swap (8 < 11)
+   - Compare 11 and 12: No Swap (11 < 12)
+   - Compare 12 and 13: No Swap (12 < 13)
+   - Compare 13 and 15: No Swap (13 < 15)
+   **List after Pass 9**: 4 7 8 11 12 13 15 25
+   Number of exchanges in Pass 9: 0
+   Number of comparisons in Pass 9: 5
+
+The sorted list after all passes of the Bubble
+
+
+--------------------
+Question - 1(C) ==> Send to yash Whatsapp
+--------------------
