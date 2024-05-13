@@ -148,3 +148,161 @@ The sorted list after all passes of the Bubble
 --------------------
 Question - 1(C) ==> Send to yash Whatsapp
 --------------------
+
+
+--------------------
+Question - 1(D)
+--------------------
+
+Since there's no graph provided, I'll illustrate three spanning trees of a weighted connected graph with random edge weights and vertices labeled as \(a\), \(b\), \(c\), and \(d\).
+
+Let's denote the vertices as follows:
+- \(a\)
+- \(b\)
+- \(c\)
+- \(d\)
+
+And suppose the edges have weights as shown in the diagram:
+
+```
+       7       8
+   a ----- b ----- c
+   |  6  / | 10  / |
+   |    /  |    /  |  9
+   |   /   |   /   |
+   |  /    |  /    |
+   | /     | /     |
+   d ----- e ----- f
+       12      9
+```
+
+Here are three spanning trees of this graph:
+
+1. Spanning Tree 1:
+```
+   a ----- b ----- c
+   |       |
+   |  6    |  10
+   |       |
+   d ----- e ----- f
+          9
+```
+
+2. Spanning Tree 2:
+```
+   a       b       c
+           |       |
+   d ----- e ----- f
+       9
+```
+
+3. Spanning Tree 3:
+```
+   a ----- b
+   |       |
+   |       |
+   d ----- e
+``` 
+
+These are three possible spanning trees of the given graph. Depending on the specific weights and connectivity of the graph, there could be other spanning trees as well.
+
+--------------------
+Question = 2(A)
+--------------------
+
+Sure, here are examples for each complexity class:
+
+1. **( O(n) )**: Linear Time Complexity
+   - Example: Finding the maximum element in an unsorted array.
+     ```python
+     def find_max(arr):
+         max_val = arr[0]
+         for num in arr:
+             if num > max_val:
+                 max_val = num
+         return max_val
+     ```
+   - In this example, the time complexity is ( O(n) ) because the algorithm traverses the entire array once to find the maximum element.
+
+2. **( O(n^2) )**: Quadratic Time Complexity
+   - Example: Bubble Sort algorithm.
+     ```python
+     def bubble_sort(arr):
+         n = len(arr)
+         for i in range(n):
+             for j in range(0, n-i-1):
+                 if arr[j] > arr[j+1]:
+                     arr[j], arr[j+1] = arr[j+1], arr[j]
+     ```
+   - In this example, the time complexity is \( O(n^2) \) because there are nested loops iterating over the array.
+
+3. **( O(n log n) )**: Linearithmic Time Complexity
+   - Example: Merge Sort algorithm.
+     ```python
+     def merge_sort(arr):
+         if len(arr) > 1:
+             mid = len(arr) // 2
+             L = arr[:mid]
+             R = arr[mid:]
+             merge_sort(L)
+             merge_sort(R)
+             i = j = k = 0
+             while i < len(L) and j < len(R):
+                 if L[i] < R[j]:
+                     arr[k] = L[i]
+                     i += 1
+                 else:
+                     arr[k] = R[j]
+                     j += 1
+                 k += 1
+             while i < len(L):
+                 arr[k] = L[i]
+                 i += 1
+                 k += 1
+             while j < len(R):
+                 arr[k] = R[j]
+                 j += 1
+                 k += 1
+     ```
+   - In this example, the time complexity is ( O(n log n) ) because the merge sort algorithm divides the array into halves recursively and then merges them in ( O(n) ) time, resulting in ( O(n log n) ) overall.
+
+--------------------
+Question = 2(B - i)
+--------------------
+
+The Euclidean algorithm is an efficient method for computing the greatest common divisor (GCD) of two integers. It relies on the fact that the GCD of two numbers remains the same if the larger number is replaced by its difference with the smaller number.
+
+Here's the Euclidean algorithm to compute the GCD of two non-negative integers ( a ) and ( b ):
+
+1. If ( b = 0 ), return ( a ) as the GCD.
+2. Otherwise, recursively compute the GCD of ( b ) and the remainder of ( a ) divided by ( b ).
+
+Now, let's apply the Euclidean algorithm to find ( \text{GCD}(325, 95) ):
+
+1.{GCD}(325, 95)
+2.{GCD}(95, 325 mod 95)= {GCD}(95, 40)
+3.{GCD}(40, 95 mod 40) = {GCD}(40, 15)
+4.{GCD}(15, 40 mod 15) = {GCD}(15, 10)
+5.{GCD}(10, 15 mod 10) = {GCD}(10, 5)
+6.{GCD}(5, 10 mod 5)   = {GCD}(5, 0) 
+Since ( b = 0 ), we return ( a = 5 ) as the GCD.
+
+So, ( \text{GCD}(325, 95) = 5 ).
+
+--------------------
+Question = 2(B - ii)
+--------------------
+
+The complexity analysis of the Euclidean algorithm involves examining its time complexity in terms of the number of iterations needed to compute the greatest common divisor (GCD) of two non-negative integers (a) and (b).
+
+Let (a) be the larger of the two numbers and (b) be the smaller one. In each step of the algorithm, the remainder of (a) divided by (b) (denoted (a mod b)) is computed. This operation takes (O(log(\max(a,b)))) time using efficient division algorithms. 
+
+The algorithm continues until the remainder becomes zero, which occurs after at most (log(max(a,b))) iterations. 
+
+Therefore, the time complexity of the Euclidean algorithm is (O(log(max(a,b)))), where (max(a,b)) represents the larger of the two input numbers (a) and (b). 
+
+In terms of space complexity, the algorithm requires only a constant amount of additional space for storing intermediate values during each step, so the space complexity is (O(1)).
+
+In summary:
+- Time complexity: (O(\log(max(a,b)))\)
+- Space complexity: (O(1))
