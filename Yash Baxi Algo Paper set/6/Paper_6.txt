@@ -306,3 +306,201 @@ In terms of space complexity, the algorithm requires only a constant amount of a
 In summary:
 - Time complexity: (O(\log(max(a,b)))\)
 - Space complexity: (O(1))
+
+--------------------
+Question = 3(A)
+--------------------
+
+Kruskal's and Prim's algorithms are both popular methods for finding the minimum spanning tree (MST) of a connected, weighted graph, but they have different approaches and efficiencies.
+
+1. **Approach**:
+   - Kruskal's algorithm: It follows a greedy approach where it selects edges in ascending order of their weights and adds them to the MST if they don't form a cycle. It starts with the smallest edge and keeps adding edges until all vertices are included.
+   - Prim's algorithm: It also follows a greedy approach but works by selecting vertices instead of edges. It starts with an arbitrary vertex and grows the MST by adding the cheapest edge that connects a vertex in the MST to a vertex outside the MST.
+
+2. **Data Structures**:
+   - Kruskal's algorithm typically uses a disjoint-set data structure (like Union-Find) to efficiently detect cycles and manage the connected components.
+   - Prim's algorithm often uses a priority queue (such as a min-heap) to efficiently select the minimum weight edge or vertex to add to the MST.
+
+3. **Complexity**:
+   - Kruskal's algorithm has a time complexity of O(E log E) or O(E log V), where E is the number of edges and V is the number of vertices.
+   - Prim's algorithm has a time complexity of O(V^2) with an adjacency matrix representation of the graph, or O(E + V log V) with an adjacency list representation, where E is the number of edges and V is the number of vertices.
+
+4. **Applications**:
+   - Kruskal's algorithm is often preferred when the graph is sparse (few edges) because it sorts edges based on weight.
+   - Prim's algorithm can be more efficient on dense graphs (many edges) because it operates based on vertices and can take advantage of faster data structures for maintaining the priority queue.
+
+5. **Parallelization**:
+   - Kruskal's algorithm can be more easily parallelized because it operates on edges independently.
+   - Prim's algorithm has dependencies between steps, making parallelization more challenging.
+
+6. **Memory Usage**:
+   - Kruskal's algorithm may require more memory due to the need to store edges and the disjoint-set data structure.
+   - Prim's algorithm may require less memory as it operates directly on vertices and maintains a smaller priority queue.
+
+In summary, both algorithms are efficient for finding MSTs, but the choice between them often depends on the characteristics of the graph and the available resources for implementation.
+
+
+--------------------
+Question = 3(B)
+--------------------
+
+Hand Written Given to Yash 
+
+
+--------------------
+Question = 4(A)
+--------------------
+
+Branch and Bound is a technique used in combinatorial optimization problems to systematically search through the space of possible solutions, efficiently pruning branches of the search tree that are guaranteed to be suboptimal. It combines the concepts of divide and conquer with greedy algorithm strategies.
+
+Here's how Branch and Bound works:
+
+1. **Branching**: The problem space is divided into smaller subspaces, often represented as a tree structure, where each node represents a partial solution or a decision point.
+  
+2. **Bounding**: At each node of the search tree, a bound (upper or lower) is calculated, which represents the best possible solution that can be obtained by exploring that node and its descendants.
+
+3. **Pruning**: Nodes with bounds worse than the current best solution are pruned from further consideration, reducing the search space and improving efficiency.
+
+4. **Backtracking**: The search proceeds recursively, exploring promising branches first. If a branch leads to a dead end or is pruned, the algorithm backtracks to the nearest decision point and explores an alternative branch.
+
+Branch and Bound is particularly useful for optimization problems where:
+- The search space is too large to be exhaustively explored.
+- The problem has an objective function that can be used to evaluate the quality of partial solutions.
+- There are constraints that limit the feasible solutions.
+
+Example problem that can be solved using Branch and Bound:
+
+**Traveling Salesman Problem (TSP)**:
+Given a list of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the starting city. This problem is NP-hard and is typically solved using optimization techniques like Branch and Bound. In the Branch and Bound approach for TSP, at each node of the search tree, we branch by selecting the next city to visit, calculate a lower bound on the remaining distance, prune branches that exceed the current best solution, and backtrack when necessary. This process continues until all branches have been explored, and the optimal solution is found.
+
+--------------------
+Question = 4(B)
+--------------------
+
+To apply Dijkstra's algorithm to find the shortest paths from V1 to all other nodes, we'll use the following steps:
+
+1. **Initialization**: Set the distance to V1 as 0 and all other distances to infinity. Keep track of the predecessor of each node.
+2. **Selecting the Next Node**: Choose the node with the smallest tentative distance from V1.
+3. **Updating Neighbors**: For each neighbor of the selected node, update its tentative distance from V1 if it can be reached with a shorter path.
+4. **Marking Nodes as Visited**: Mark the selected node as visited to prevent revisiting it.
+5. **Repeat Steps 2-4 Until All Nodes are Visited**: Continue selecting nodes and updating distances until all nodes have been visited.
+
+Let's apply these steps:
+
+Step 0 (Initialization):
+- Set the distance to V1 as 0 and all other distances to infinity.
+- Set the predecessor of each node to null.
+
+| Node | Distance from V1 | Predecessor |
+|------|------------------|-------------|
+| V1   | 0                | Null        |
+| V2   | ∞                | Null        |
+| V3   | ∞                | Null        |
+| V4   | ∞                | Null        |
+| V5   | ∞                | Null        |
+
+Step 1:
+- Start from V1 (the source node) with a distance of 0.
+
+Step 2:
+- Select V1.
+
+Step 3:
+- Update distances to V2 and V3:
+  - Distance to V2: 6 + 7 = 13
+  - Distance to V3: 6 + 8 = 14
+
+| Node | Distance from V1 | Predecessor |
+|------|------------------|-------------|
+| V1   | 0                | Null        |
+| V2   | 13               | V1          |
+| V3   | 14               | V1          |
+| V4   | ∞                | Null        |
+| V5   | ∞                | Null        |
+
+Step 4:
+- Mark V1 as visited.
+
+Step 5:
+- Select the unvisited node with the smallest distance (V2).
+
+Step 6:
+- Update distances to V3 and V5:
+  - Distance to V3: 13 + 4 = 17
+  - Distance to V5: 13 + √6 = 13 + √6
+
+| Node | Distance from V1 | Predecessor |
+|------|------------------|-------------|
+| V1   | 0                | Null        |
+| V2   | 13               | V1          |
+| V3   | 14               | V1          |
+| V4   | ∞                | Null        |
+| V5   | 13 + √6          | V2          |
+
+Step 7:
+- Mark V2 as visited.
+
+Step 8:
+- Continue the process until all nodes are visited and distances are finalized.
+
+This process will continue until all nodes are visited, and the shortest path from V1 to all other nodes will be determined. Each node will have its shortest distance from V1 and its predecessor in the shortest path.
+
+
+--------------------
+Question = 5(A)
+--------------------
+
+Certainly!
+
+1. **Path**:
+   - A path in a graph is a sequence of vertices where each adjacent pair of vertices is connected by an edge. 
+   - Formally, a path (P) in a graph ( G ) is defined as an alternating sequence of vertices and edges: ( v_0, e_1, v_1, e_2, v_2, ..., e_{k-1}, v_{k-1}, e_k, v_k ), where ( e_i ) denotes the edge connecting ( v_{i-1} ) and ( v_i \) for ( 1 leq i leq k ).
+
+2. **Cycle**:
+   - A cycle in a graph is a path where the first and last vertices are the same, forming a closed loop.
+   - Formally, a cycle ( C ) in a graph ( G ) is a path ( v_0, e_1, v_1, e_2, v_2, ..., e_{k-1}, v_{k-1}, e_k, v_k ) where ( v_0 = v_k ) and ( v_i ) are distinct for ( 0 leq i < k ).
+
+3. **Complete Graph**:
+   - A complete graph is a simple undirected graph where each pair of distinct vertices is connected by a unique edge.
+   - Formally, a complete graph ( K_n ) is a graph with ( n ) vertices where every vertex is connected to every other vertex by an edge.
+   - In a complete graph with ( n ) vertices, there are ( frac{n(n-1)}{2} ) edges, as each vertex is connected to ( n-1 ) other vertices.
+   - Complete graphs are often denoted by the letter ( K ) followed by the number of vertices, such as (K) for a complete graph with 3 vertices.
+
+In summary:
+- A path is a sequence of vertices connected by edges, where no vertex appears more than once.
+- A cycle is a closed path where the first and last vertices are the same, and no other vertex is repeated.
+- A complete graph is a graph where every pair of distinct vertices is connected by an edge, forming a fully connected graph.
+
+
+--------------------
+Question = 5(B)
+--------------------
+
+Sure, here's a Python program to generate the Fibonacci series of 10 terms and count the number of loop iterations and assignment operations:
+
+```
+def fibonacci(n):
+    fib_series = [0, 1]
+    num_iterations = 0
+    num_assignments = 2  # Assignments for initializing the list
+
+    for i in range(2, n):
+        fib_series.append(fib_series[i-1] + fib_series[i-2])
+        num_iterations += 1
+        num_assignments += 1  # Assignment for appending the next Fibonacci number
+
+    return fib_series, num_iterations, num_assignments
+
+n_terms = 10
+series, iterations, assignments = fibonacci(n_terms)
+
+print("Fibonacci series of {} terms:".format(n_terms))
+print(series)
+
+print("\nNumber of loop iterations:", iterations)
+print("Number of assignment operations:", assignments)
+```
+
+This program defines a function `fibonacci()` that generates the Fibonacci series up to the specified number of terms (`n`). It iterates through the loop to generate the series and counts the number of iterations and assignment operations. Finally, it prints the Fibonacci series along with the counts.
+
+When you run this program, it will output the Fibonacci series of 10 terms along with the number of loop iterations and assignment operations.
