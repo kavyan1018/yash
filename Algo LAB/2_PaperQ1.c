@@ -3,7 +3,6 @@
 void selectionSort(int arr[], int n, int *comparison_count) {
     int i, j, min_index, temp;
     *comparison_count = 0;
-    
     for (i = 0; i < n-1; i++) {
         
         min_index = i;
