@@ -9,7 +9,7 @@ int main()
 
     printf("Enter the String :-");
     gets(str);
-
+    
     while (str[length] != '\0')
     {
         loop_count++;
