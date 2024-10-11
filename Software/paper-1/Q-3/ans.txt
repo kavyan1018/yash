@@ -1,3 +1,8 @@
+
+Q-3) Draw ERD for oscas make necessary assumptions
+
+Ans ->
+
 Entity Relationship Diagram (ERD) for the Online Student Course Assessment System (OSCAS). Let me outline the assumptions and then create a detailed ERD.
 Assumptions for OSCAS ERD:
 
@@ -7,6 +12,3 @@ Each assessment can have multiple questions
 Students submit answers for assessments, and each submission is graded
 Courses are taught by instructors, and an instructor can teach multiple courses
 The system needs to maintain user profiles for different user types
-
-
-
