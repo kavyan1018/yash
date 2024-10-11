@@ -7,3 +7,6 @@ Each assessment can have multiple questions
 Students submit answers for assessments, and each submission is graded
 Courses are taught by instructors, and an instructor can teach multiple courses
 The system needs to maintain user profiles for different user types
+
+
+
