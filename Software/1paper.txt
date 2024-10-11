@@ -15,35 +15,26 @@ The system needs to be scalable to handle peak loads during admission periods.
 
 Certainly. I'll elaborate on the first main section of the SRS, which is the Introduction. This section sets the foundation for the entire document, providing context and essential information about the project. Let's break it down:
 
-1. Introduction
-
-1.1 Purpose:
 This subsection explains why we're creating this SRS document. Its main goals are:
 - To clearly define the software requirements for the Online Study Center Allocation System (OSCAS)
 - To serve as a contract between the development team and stakeholders
 - To provide a basis for estimating costs and schedules
 - To serve as a reference for validation and verification of the final system
-
-1.2 Scope:
 This part outlines what OSCAS will and won't do. It's crucial for managing expectations and setting project boundaries. Key points include:
 - OSCAS will handle the entire study center allocation process
 - It will integrate with the existing university admission system
 - The system will cater to students, administrators, and study center managers
 - It does not include the actual admission process or other university administrative functions
 
-1.3 Definitions, Acronyms, and Abbreviations:
 This subsection ensures that all readers understand the terminology used throughout the document. We could expand this list to include more domain-specific terms, such as:
 - Allocation Algorithm: The method used to assign students to study centers
 - Preference Ranking: The order in which students list their preferred study centers
 - Center Capacity: The maximum number of students a study center can accommodate
-
-1.4 References:
 This part cites any external documents or standards used in creating the SRS. We could add more references if needed, such as:
 - University admission policies and procedures
 - Relevant educational standards or regulations
 - Technical standards for web accessibility (e.g., WCAG 2.1)
 
-1.5 Overview:
 This subsection briefly describes the structure of the rest of the SRS document. It helps readers navigate the document and understand what to expect in each section.
 
 1-B) -----------------------------------------------------------------------------------------
@@ -51,17 +42,13 @@ This subsection briefly describes the structure of the rest of the SRS document.
 
 The Iterative Enhancement Model is a software development approach that emphasizes the gradual development of a system through repeated cycles (iterations). In each iteration, a part of the system is designed, developed, and tested. The process continues until the final product is complete and meets all requirements.
 
-
-
 First Iteration:
 Develop a basic version of the website that allows users to browse products and view product details.
 Test and deploy this version.
 
-
 Second Iteration:
 Enhance the website by adding a shopping cart feature, allowing users to add items to the cart.
 Test and deploy this new version.
-
 
 Third Iteration:
 Introduce a payment gateway, enabling users to purchase items.
