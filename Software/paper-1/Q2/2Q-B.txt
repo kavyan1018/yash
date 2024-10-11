@@ -1,0 +1,39 @@
+Q - 4 -> Draw PERT chart for the development of OSCAS
+
+Ans :
+
+Initial Phase:
+
+Requirements Analysis
+System Design (splits into three parallel tracks)
+
+
+Design Phase (parallel tracks):
+Database Design
+UI/UX Design
+Security Architecture
+
+Development Phase:
+Backend Development
+Frontend Development
+Security Implementation
+
+Integration and Testing:
+Integration of all components
+Testing
+Security Audit
+Bug Fixes
+
+Preparation for Release:
+User Documentation
+Deployment Planning
+Beta Release
+
+Final Phase:
+Feedback Collection
+Final Adjustments
+Production Release
+
+
+
+I've included estimated durations for each task. The critical path would likely go through the security-related tasks, as these are crucial for a cloud application security system.
