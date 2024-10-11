@@ -1,0 +1,50 @@
+    
+2) -----------------------------------------------------------------------------------------
+
+
+2-A) -----------------------------------------------------------------------------------------
+
+Q --> Draw the zero and first level DFD for OSCAS. Make necessary assumptions.
+
+Ans ->  
+
+
+Let me explain the key components of these diagrams:
+
+Level 0 DFD (Context Diagram): in img name level-0-dfd.png
+
+Shows the system's interaction with external entities (Student, Instructor, Administrator)
+Displays the main data flows in and out of the system
+Provides a high-level overview of the system's scope
+
+Level 1 DFD: level-1-dfd.png
+
+1) Breaks down the system into five main processes:
+
+1 User Authentication
+2 Course Management
+3 Assessment Management
+4 Submission Handling
+5 Grading System
+
+
+2) Shows four data stores:
+
+User Data
+Course Data
+Assessment Data
+Submission Data
+
+
+Illustrates how data flows between processes and data stores
+Maintains the external entities from Level 0
+
+Key features of the system shown in the DFDs:
+
+All users must authenticate through Process 1.0
+Course management (Process 2.0) is handled by both instructors and administrators
+Assessment creation and management (Process 3.0) is primarily done by instructors
+Students interact mainly with Processes 3.0 and 4.0 for viewing and submitting assessments
+The grading system (Process 5.0) connects instructors' grading with students viewing their results
+
+These diagrams provide a comprehensive view of how the Online Student Course Assessment System functions and how different users interact with various system components.
