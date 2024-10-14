@@ -63,5 +63,3 @@ Example of a Data Dictionary Entry:
 | `Gender`          | `VARCHAR` | 6      | Gender of the customer                | CHECK (Gender IN ('Male', 'Female', 'Other')) | NULL          |
 
 This table entry describes the structure of a "Customers" table with relevant metadata for each field.
-
-Would you like further details or another example?
