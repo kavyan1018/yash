@@ -9,6 +9,7 @@ Q --> Draw the zero and first level DFD for OSCAS. Make necessary assumptions.
 Ans ->  
 
 
+
 Let me explain the key components of these diagrams:
 
 Level 0 DFD (Context Diagram): in img name level-0-dfd.png
