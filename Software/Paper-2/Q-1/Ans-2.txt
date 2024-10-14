@@ -1,0 +1,34 @@
+Spiral Model with Example:
+The Spiral Model is a risk-driven process model that combines the iterative nature of prototyping with the systematic aspects of the Waterfall Model. It allows for incremental development of the software through multiple cycles, called "spirals." Each spiral consists of four phases:
+
+
+Planning: Determine objectives, constraints, and resources for the project.
+
+Risk Analysis: Identify risks and evaluate alternatives.
+
+Engineering: Develop the product through coding, testing, and validation.
+
+Evaluation: Customer feedback is obtained and used for the next iteration.
+
+Example:
+Consider the development of a hospital management system. In the first spiral, you plan the basic requirements (like patient registration). Then you analyze risks (such as data security), build a prototype (basic UI for patient registration), and evaluate it with the client. In the next spirals, you add additional features like doctor management, billing system, and so on.
+
+
+Advantages over the Waterfall Model:
+-------------------------------------------
+Risk Management: The Spiral Model actively identifies and resolves risks at early stages.
+
+Flexibility: Changes can be made at any stage, making it more adaptable.
+
+Incremental Development: The system is developed in parts, allowing early detection of problems.
+
+Customer Feedback: Regular customer involvement ensures that the project aligns with client expectations.
+
+
+Disadvantages over the Waterfall Model:
+-------------------------------------------
+Complexity: It is more complex to manage compared to the linear nature of the Waterfall Model.
+
+Cost: It is more expensive due to continuous iterations and risk analysis phases.
+
+Time: The iterative cycles can lead to longer development times if not managed properly.
