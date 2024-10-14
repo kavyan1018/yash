@@ -1,0 +1,33 @@
+Modularity:
+Modularity refers to dividing a system into smaller, manageable parts or modules. Each module should have a specific function or purpose.
+
+Benefits: Easier to understand, develop, test, and maintain
+Implementation: Group related functions together into modules or classes
+
+
+Abstraction:
+Abstraction involves hiding complex implementation details and exposing only the necessary information or functionality.
+
+Benefits: Reduces complexity, improves clarity, and allows focus on essential aspects
+Implementation: Use abstract data types, interfaces, or classes to define behavior without specifying implementation
+
+
+Top-down Design:
+This principle involves breaking down a complex problem into smaller, more manageable sub-problems.
+
+Benefits: Simplifies problem-solving, improves organization, and facilitates parallel development
+Implementation: Start with high-level functions and progressively refine them into more detailed sub-functions
+
+
+Stepwise Refinement:
+Stepwise refinement is the process of developing a program in stages, starting with a high-level description and progressively adding more detail.
+
+Benefits: Allows for incremental development, easier debugging, and better project management
+Implementation: Begin with a general algorithm and refine it step by step, adding more specific details at each stage
+
+
+Structured Programming:
+This principle promotes the use of a limited set of control structures to create clear and organized code.
+
+Benefits: Improves readability, reduces errors, and facilitates maintenance
+Implementation: Use sequence, selection (if-else), and iteration (loops) as primary control structures; avoid excessive use of goto statements
