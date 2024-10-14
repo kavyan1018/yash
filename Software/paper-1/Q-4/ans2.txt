@@ -1,0 +1,65 @@
+Definition:
+A static object, also known as a class member, is a variable or method that belongs to the class itself rather than to any specific instance of the class.
+Key Characteristics:
+
+Shared among all instances of the class
+Accessed using the class name, not through an object
+Exists even when no objects of the class have been created
+Typically used for constants or utility functions
+
+
+Memory Allocation:
+Static objects are stored in a special area of memory called the "static memory" or "class area", separate from the heap where instance objects are stored.
+
+Types of Static Members:
+
+a) Static Variables:
+
+Also called class variables
+Shared by all instances of the class
+Initialized only once, at the start of program execution
+
+b) Static Methods:
+
+Can be called using the class name
+Can only directly access other static members of the class
+Cannot use the 'this' keyword as they don't belong to any instance
+
+javaCopypublic class BCAExample {
+    public static int staticVar = 0;  // Static variable
+    
+    public static void staticMethod() {  // Static method
+        System.out.println("This is a static method");
+    }
+}
+
+Usage:
+javaCopyBCAExample.staticVar = 5;  // Accessing static variable
+BCAExample.staticMethod();  // Calling static method
+
+Common Uses in Software Development:
+
+Utility classes (e.g., Math class in Java)
+Constants (e.g., Math.PI)
+Counters shared across all instances
+Factory methods for object creation
+
+
+Advantages:
+
+Memory efficiency (only one copy for all instances)
+Useful for operations that don't require object state
+Can be used to control object creation (Singleton pattern)
+
+
+Disadvantages:
+
+Can make code harder to test if overused
+May lead to problems in multithreaded environments if not handled properly
+
+
+Best Practices:
+
+Use static members judiciously
+Prefer static methods for utility functions
+Be cautious with mutable static variables in multithreaded contexts
