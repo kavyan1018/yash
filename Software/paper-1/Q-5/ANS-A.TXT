@@ -1,0 +1,88 @@
+The SEI-CMM defines five maturity levels for software processes, each representing a different stage of process maturity. These levels provide a framework for organizations to improve their software development processes. Here are the five levels:
+
+Initial (Level 1): ->
+Characteristics:
+Processes are ad hoc and chaotic
+Success depends on individual efforts and heroics
+Unpredictable and reactive approach
+
+
+Key points:
+No stable environment for software development
+Projects often exceed budgets and schedules
+Processes are not defined or are poorly defined
+
+
+
+
+Repeatable (Level 2): ->
+Characteristics:
+Basic project management processes are established
+Earlier successes can be repeated on similar projects
+
+
+Key processes areas:
+Requirements management
+Software project planning
+Software project tracking and oversight
+Software subcontract management
+Software quality assurance
+Software configuration management
+
+
+
+
+Defined (Level 3): ->
+Characteristics:
+Standard processes for developing and maintaining software are documented
+Processes are integrated into a coherent whole
+
+
+Key process areas:
+Organization process focus
+Organization process definition
+Training program
+Integrated software management
+Software product engineering
+Intergroup coordination
+Peer reviews
+
+
+
+
+Managed (Level 4): ->
+Characteristics:
+Detailed measures of the software process and product quality are collected
+Processes and products are quantitatively understood and controlled
+
+
+Key process areas:
+Quantitative process management
+Software quality management
+Defect prevention
+Technology change management
+
+
+
+
+Optimizing (Level 5): ->
+Characteristics:
+Continuous process improvement is enabled by quantitative feedback and piloting innovative ideas
+Focus on process improvement
+
+
+Key process areas:
+Process change management
+Technology change management
+Defect prevention
+
+
+Each level builds upon the previous one, creating a cumulative effect. Organizations typically progress through these levels sequentially, though it's possible to skip levels (though not recommended).
+
+The SEI-CMM provides several benefits: -> 
+It offers a roadmap for process improvement
+It helps in assessing the current state of an organization's processes
+It provides a common language and shared vision for process improvement
+It can be used as a benchmark for comparing different organizations
+
+It's worth noting that while the original CMM has been superseded by newer models like CMMI (Capability Maturity Model Integration), the core concept of these five maturity levels remains influential in software engineering and project management.
