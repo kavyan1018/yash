@@ -1,0 +1,49 @@
+Q -> Explain the terms 'Alpha Testing' and 'Beta Testing'. 
+
+
+
+Alpha Testing:
+Definition:
+
+Alpha testing is a type of testing performed by internal teams (typically developers and quality assurance testers) at the developer's site before the product is released to external users. It is the first phase of testing where the software is tested in a controlled environment.
+Purpose:
+
+The main goal of alpha testing is to identify and fix bugs or issues before the software is exposed to real users. It aims to ensure that the core functionality of the software works as expected.
+Who conducts it?:
+
+It is typically carried out by internal employees, such as developers, testers, and sometimes members of the product management team.
+Environment:
+
+Alpha testing is conducted in a controlled environment. Testers may use techniques like white-box and black-box testing to verify functionality, usability, and reliability.
+Features:
+
+It focuses on:
+Identifying major bugs and issues early.
+Checking the stability of the system.
+Testing various features and functionality as per the requirements.
+Outcome:
+
+The software is improved based on the feedback and issues found, preparing it for the next testing phase (beta testing).
+Beta Testing:
+Definition:
+
+Beta testing is the second phase of testing in which the software is released to a limited, real-world audience (usually a group of external users) before the final product is released to the general public.
+Purpose:
+
+The goal of beta testing is to evaluate the software’s performance in real-world scenarios. It helps catch bugs or issues that may not have been detected during alpha testing. It also provides feedback on user experience, usability, and functionality.
+Who conducts it?:
+
+It is performed by real users (end-users) who are not part of the organization. These users use the software in their own environments and provide feedback.
+Environment:
+
+Beta testing occurs in a real-world environment where users test the software in various conditions that mimic how it would be used after the release.
+Features:
+
+It focuses on:
+Real-world usage scenarios.
+Gathering user feedback about usability and functionality.
+Identifying any unexpected issues that occur outside the controlled environment.
+Fine-tuning performance and fixing minor bugs.
+Outcome:
+
+Feedback is collected from users, and any final adjustments or bug fixes are made before the software is officially launched.
