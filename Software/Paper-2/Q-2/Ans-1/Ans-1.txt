@@ -1,0 +1,33 @@
+Q -> Draw the Zero and first level DFDs for OAS. Make necessary assumptions.
+
+This Context Diagram shows the main external entities interacting with the Online Auction System:
+
+Bidder: Places bids, registers/logs in, and views items.
+Seller: Lists items for auction and registers/logs in.
+Administrator: Manages users and auctions.
+
+
+This Level 1 DFD breaks down the Online Auction System into six main processes:
+
+1->User Management: Handles user registration, login, and profile management.
+2->Item Management: Manages the listing and viewing of auction items.
+3->Auction Management: Controls the auction process, including start and end times.
+4->Bid Processing: Handles the placement and processing of bids.
+5->Notification System: Sends notifications to users about auction events.
+6->Reporting: Generates system reports for administrators.
+
+The diagram also includes four data stores:
+
+1->User Data: Stores information about registered users.
+2->Item Data: Stores details about items listed for auction.
+3->Auction Data: Stores information about ongoing and completed auctions.
+4->Bid Data: Stores all bid information.
+
+Assumptions made for this system:
+There are three main user types: Bidders, Sellers, and Administrators.
+Users must register and login to interact with the system.
+Sellers can list items for auction.
+Bidders can view items and place bids.
+The system processes bids and manages auctions automatically.
+The system sends notifications to users about relevant events.
+Administrators can manage users and auctions, and view system reports.
