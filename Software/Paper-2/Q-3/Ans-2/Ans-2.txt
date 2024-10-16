@@ -1,0 +1,36 @@
+Q -> Draw usse case diagram for OAS
+
+
+Actors: -->
+User: Represents a general user of the system.
+Seller: A specialized user who can list items for auction.
+Bidder: A specialized user who can place bids on items.
+Administrator: Manages the system and its users.
+
+Use Cases: -->
+Register/Login: All users can register and log in to the system.
+Manage Profile: Users can view and update their profile information.
+Search Items: Users can search for items available for auction.
+View Item Details: Users can view detailed information about an item.
+List Item for Auction: Sellers can list their items for auction.
+Manage Listed Items: Sellers can manage their listed items (e.g., edit, remove).
+Place Bid: Bidders can place bids on items.
+View Bid History: Bidders can view the history of their bids.
+Receive Notifications: Users receive notifications about relevant events.
+Make Payment: Bidders can make payments for won auctions.
+Leave Feedback: Both sellers and bidders can leave feedback after a transaction.
+Manage Users: Administrators can manage user accounts.
+Manage Categories: Administrators can manage item categories.
+Generate Reports: Administrators can generate system reports.
+Resolve Disputes: Administrators can handle disputes between users.
+
+Relationships: -->
+Solid lines represent associations between actors and use cases.
+Dotted lines represent inheritance relationships (Seller and Bidder inherit from User).
+
+Assumptions: -->
+All users (including Sellers and Bidders) can perform general actions like searching for items and viewing item details.
+Sellers and Bidders have additional specialized actions they can perform.
+Administrators have a separate set of actions focused on system management.
+The system includes basic e-commerce functionalities like payments and feedback.
+There's a dispute resolution process managed by administrators.
