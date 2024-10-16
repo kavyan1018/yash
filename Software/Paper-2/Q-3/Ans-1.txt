@@ -1,0 +1,49 @@
+1)--> USER :
+Represents all users of the system (buyers, sellers, administrators)
+Can list multiple items (as a seller)
+Can place multiple bids (as a buyer)
+Participates in transactions (as either buyer or seller)
+
+
+2)--> ITEM :
+Represents items listed for auction
+Belongs to one user (the seller)
+Can receive multiple bids
+Belongs to one auction
+Is categorized under one category
+
+
+3)--> CATEGORY :
+Represents different categories of items
+One category can have multiple items
+
+
+4)--> AUCTION :
+Represents an auction event for a specific item
+Has one item
+Can result in one transaction (if successful)
+
+
+5)--> BID :
+Represents a bid placed by a user on an item
+Belongs to one user and one item
+
+
+6)--> TRANSACTION :
+Represents a completed auction sale
+Associated with one auction
+Involves two users (buyer and seller)
+
+
+Assumptions made:
+A user can be both a buyer and a seller.
+Each item belongs to only one category.
+An item can only be in one auction at a time.
+An auction is created for each item listed.
+A transaction is created only when an auction is successful (i.e., a sale is made).
+Users can place multiple bids on the same item.
+The system keeps track of all bids, not just the winning bid.
+
+Relationships:
+One-to-Many (1:N) relationships are represented by ||--o{
+One-to-One (1:1) relationships are represented by ||--||
