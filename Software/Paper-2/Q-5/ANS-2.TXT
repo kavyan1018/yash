@@ -1,0 +1,53 @@
+Q  -->  What is meant by cohesion ? Explain different types of cohesion. 
+
+Cohesion refers to the degree to which the elements within a module, class, or component in a software system are functionally related to one another. In simple terms, it describes how well the components of a module "stick together" to achieve a single, well-defined task. Cohesion is a key aspect of software design and is important because high cohesion usually leads to more maintainable, readable, and understandable code.
+
+Why is Cohesion Important?
+High Cohesion: A highly cohesive module performs a single, well-defined task. It improves software maintainability, reduces complexity, and makes it easier to modify, test, and debug.
+Low Cohesion: A module with low cohesion contains a mixture of unrelated functionalities. This can lead to increased complexity, poor readability, and difficulties in debugging and testing.
+
+
+Types of Cohesion (from lowest to highest):
+----------------------------------------------
+
+Coincidental Cohesion:
+---------------------------
+Definition: This is the lowest form of cohesion where the elements within a module are grouped arbitrarily. There is no meaningful relationship between the components; they are just placed together by coincidence.
+Example: A module that includes functions for reading a file, printing a report, and sending an email, without any logical connection between them.
+Characteristics: Very difficult to maintain and understand; should be avoided.
+
+Logical Cohesion:
+--------------------
+Definition: In logical cohesion, elements within the module perform similar tasks based on logic, but the tasks are only loosely related. The module contains several related but not necessarily interdependent functions.
+Example: A module containing a set of error-handling routines for different error types, where each routine is logically related but serves different purposes.
+Characteristics: Better than coincidental cohesion but still problematic because the functions could be split into smaller, more focused modules.
+
+Temporal Cohesion:
+-------------------------
+Definition: Elements within the module are grouped together because they are executed at the same time or in the same phase of a process.
+Example: A module that initializes variables, opens files, and logs the system status during system startup.
+Characteristics: Tasks are related by timing rather than functionality, which can make the module harder to maintain.
+
+Procedural Cohesion:
+----------------------
+Definition: In procedural cohesion, the elements of the module are grouped because they must be executed in a specific order to achieve a task. These elements may not share a common goal, but they must follow a particular sequence.
+Example: A module that processes an order by first validating data, then calculating totals, and finally saving the order to the database.
+Characteristics: While better than temporal cohesion, it may still include elements that don't directly contribute to a common purpose.
+
+Communicational (Informational) Cohesion:
+------------------------------------------------
+Definition: A module exhibits communicational cohesion when its elements operate on the same data or contribute to a specific set of related tasks that require sharing the same input/output data.
+Example: A module that reads a record from a file, processes it, and writes the result back to another file.
+Characteristics: This type of cohesion improves maintainability and understandability, but further refinement can lead to even higher cohesion.
+
+Sequential Cohesion:
+----------------------
+Definition: A module is sequentially cohesive when the output of one element serves as the input for another element within the module. The tasks are linked by a data flow between them.
+Example: A module where the first function reads data, the second function processes it, and the third function generates a report based on that processed data.
+Characteristics: This type of cohesion is quite strong and desirable, as each task directly contributes to the next step in a process.
+
+Functional (or Functional Independence) Cohesion:
+----------------------------------------------------
+Definition: This is the highest level of cohesion. A functionally cohesive module performs exactly one well-defined task. Every element within the module is essential for accomplishing this task, and the module’s purpose is clear.
+Example: A module dedicated to calculating the area of a rectangle where all functions (input validation, length, and width processing, etc.) contribute directly to this one task.
+Characteristics: Highly desirable in software design. It leads to code that is easier to maintain, debug, and test, as it follows the principle of "single responsibility."
