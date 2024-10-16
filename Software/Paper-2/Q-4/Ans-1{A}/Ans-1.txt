@@ -1,0 +1,41 @@
+What is meant by function oriented design ? Explain the concept associations with function oriented design.
+
+Let me explain the key concepts associated with function-oriented design:
+
+1) -> Decomposition:
+Function-oriented design uses a top-down approach to break down a complex system into smaller, more manageable functions. This process is called functional decomposition.
+
+2) -> Modularity:
+The system is divided into separate modules, each responsible for a specific function or set of related functions. This promotes code reusability and easier maintenance.
+
+3) -> Function Independence:
+Functions are designed to be as independent as possible, minimizing coupling between modules. This makes the system more flexible and easier to modify.
+
+4) ->Data Flow:
+Function-oriented design often uses data flow diagrams (DFDs) to represent how data moves between different functions in the system.
+
+5)--> Structured Programming:
+This approach encourages the use of structured programming techniques, such as sequence, selection, and iteration, to implement the functions.
+
+6)--> Abstraction:
+Complex operations are abstracted into simpler functions, hiding the implementation details from the user of the function.
+
+7)-> Reusability:
+Functions are designed to be reusable across different parts of the system or even in different systems.
+
+8)-->Maintainability:
+By organizing code around functions, it becomes easier to locate and fix issues or add new features without affecting the entire system.
+
+9)->Procedural Programming:
+Function-oriented design is closely associated with procedural programming languages like C, where the focus is on procedures or routines.
+
+10) --> Input-Process-Output (IPO) Model:
+Functions are often designed following the IPO model, where they take inputs, process them, and produce outputs.
+11) --> Function Libraries:
+Common functions can be grouped into libraries, promoting code reuse and standardization.
+
+12) --> Stepwise Refinement:
+The design process often involves stepwise refinement, where high-level functions are progressively broken down into more detailed subfunctions.
+
+13)--> Control Hierarchy:
+Functions are often organized in a hierarchical structure, with higher-level functions calling lower-level functions.
