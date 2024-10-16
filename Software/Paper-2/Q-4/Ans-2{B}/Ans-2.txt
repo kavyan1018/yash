@@ -1,0 +1,36 @@
+What meant by static object ? How will you identify them ? Explain.
+
+
+Static Objects:
+A static object, also known as a class object, is an object that belongs to a class rather than to any specific instance of the class. In other words, it's shared by all instances of a class and exists independently of any instances of that class.
+Key characteristics of static objects:
+
+Shared among all instances: All instances of a class share the same static object.
+
+Exist without class instantiation: Static objects are created when the class is loaded, not when an instance is created.
+
+Accessed through the class name: They are typically accessed using the class name rather than through an instance.
+
+Memory efficiency: Only one copy exists in memory, regardless of how many instances of the class are created.
+
+In this diagram, we can identify several static objects:
+
+In the AuctionSystem class:
+
+static instance: This is part of the Singleton pattern, ensuring only one instance of AuctionSystem exists.
+static userCount: A shared counter for all users in the system.
+static getInstance(): A factory method to get the single instance of AuctionSystem.
+static getUserCount() and incrementUserCount(): Methods to interact with the shared user count.
+
+In the User class:
+static validateEmail(): A utility method to validate email formats, which doesn't depend on any specific User instance.
+
+In the Auction class:
+static MINIMUM_DURATION: A constant representing the minimum duration for all auctions.
+static calculateDuration(): A utility method to calculate auction duration, which doesn't depend on a specific Auction instance.
+
+These static objects are identified because they:   ---> 
+Represent shared resources (userCount)
+Implement utility functions (validateEmail, calculateDuration)
+Define constants (MINIMUM_DURATION)
+Implement design patterns like Singleton (instance, getInstance())
