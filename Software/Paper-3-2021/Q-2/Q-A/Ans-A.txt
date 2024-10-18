@@ -1,0 +1,38 @@
+Tasks and Durations:
+
+Requirements Analysis (14 days)
+System Design (10 days)
+Database Design (10 days)
+UI Design (10 days)
+Core Module Development (21 days)
+Patient Management Module (28 days)
+Appointment Scheduling Module (21 days)
+Billing Module (21 days)
+Electronic Health Record (EHR) Module (35 days)
+Pharmacy Module (21 days)
+Reporting Module (14 days)
+Integration (14 days)
+Testing (21 days)
+Deployment (14 days)
+Training (7 days)
+Maintenance and Support (Ongoing)
+
+
+Critical Path:
+The critical path (highlighted in orange) represents the sequence of tasks that determine the minimum time needed to complete the project. Any delay in these tasks will delay the entire project.
+Parallel Tasks:
+Some tasks can be performed in parallel, such as Database Design and UI Design, or the development of different modules after the Core Module is complete.
+Dependencies:
+The chart shows dependencies between tasks. For example, Core Module Development depends on both Database Design and UI Design being completed.
+Assumptions:
+
+The project follows a waterfall-like approach for this representation, though in reality, an iterative approach might be used.
+Some tasks, like Testing, are shown as a single block but would likely be ongoing throughout development.
+The Maintenance and Support phase is shown as ongoing after deployment.
+Training is scheduled after deployment, but in practice, some training might occur earlier.
+
+
+Total Duration:
+Based on the critical path, the minimum time to complete the project up to the start of ongoing maintenance is approximately 185 days (about 6 months), not including weekends and holidays.
+
+This PERT chart provides a high-level overview of the HMS development process. In a real-world scenario, each of these tasks would be broken down into smaller subtasks, and the chart would be much more detailed. Additionally, resource allocation and potential risks would be considered in project planning.

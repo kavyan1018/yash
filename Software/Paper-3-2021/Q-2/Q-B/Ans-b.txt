@@ -1,0 +1,44 @@
+Now, let me explain the diagrams and the assumptions made:
+Context Diagram (Level 0):
+This diagram shows the HMS as a single process interacting with external entities.
+External Entities:
+
+Patient: Provides information and requests appointments
+Doctor: Inputs treatment details and receives patient history
+Admin: Manages staff information and receives reports
+Pharmacy: Manages medicine stock and receives prescriptions
+
+Assumptions:
+
+The system interacts directly with patients for appointments and medical records
+Doctors use the system to access and update patient information
+Admins use the system for staff management and reporting
+The pharmacy is integrated into the system for medication management
+
+Level 1 DFD:
+This diagram breaks down the HMS into its major subsystems and shows how data flows between them.
+Processes:
+
+Patient Management: Handles patient registration and information
+Appointment Scheduling: Manages appointment bookings
+Medical Records Management: Stores and retrieves patient medical histories
+Billing: Processes payments for medical services
+Pharmacy Management: Handles medication inventory and prescriptions
+
+Data Flows:
+
+Patient information flows from Patient to Patient Management
+Appointment requests flow from Patient to Appointment Scheduling
+Medical records flow between Medical Records Management and Doctor
+Treatment details flow from Medical Records Management to Billing
+Inventory data flows between Admin and Pharmacy Management
+Prescription information flows between Pharmacy Management and Pharmacy
+
+Assumptions:
+
+Patient Management and Appointment Scheduling are separate processes
+Medical Records Management is central to the system, interacting with multiple processes
+Billing is integrated into the system, receiving data from Medical Records Management
+Pharmacy Management is included as a major process within the HMS
+
+These diagrams provide a high-level overview of the data flows within a Hospital Management System. They show how information moves between different parts of the system and external entities.
