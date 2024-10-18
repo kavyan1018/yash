@@ -52,3 +52,5 @@ Corrective Maintenance might involve fixing a bug in the appointment scheduling 
 Adaptive Maintenance could be updating the system to comply with new healthcare data privacy regulations.
 Perfective Maintenance might include adding a new module for telemedicine consultations.
 Preventive Maintenance could involve optimizing the database queries to improve overall system performance.
+
+
