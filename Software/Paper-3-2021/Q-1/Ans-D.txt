@@ -1,2 +1,72 @@
+This use case diagram illustrates the main actors and their interactions with the Hospital Management System. Let me explain the key components and assumptions:
+Actors:
+
+Patient
+Doctor
+Nurse
+Admin
+Receptionist
+Pharmacist
+
+Key Use Cases:
+
+For Patients:
+
+Register
+Book Appointment
+View Medical Records
+Make Payment
 
 
+For Doctors:
+
+View Patient Records
+Update Medical Records
+Prescribe Medicine
+Schedule Surgery
+
+
+For Nurses:
+
+Update Patient Vitals
+Administer Medicine
+Assist in Procedures
+
+
+For Admins:
+
+Manage Staff
+Generate Reports
+Manage Inventory
+
+
+For Receptionists:
+
+Schedule Appointments
+Register Patients
+Generate Bills
+
+
+For Pharmacists:
+
+Manage Medication Inventory
+Dispense Medication
+Update Medication Records
+
+
+
+Assumptions:
+
+The system is designed for a medium to large hospital with multiple departments.
+Patients have limited access to their own medical records and can book appointments online.
+Doctors have the authority to update medical records, prescribe medicine, and schedule surgeries.
+Nurses assist in various medical procedures and help manage patient care.
+Admins have overarching management capabilities, including staff and inventory management.
+Receptionists handle front-desk operations, including appointment scheduling and billing.
+Pharmacists manage the medication-related aspects of the system.
+The system includes basic financial functions like billing and payments.
+The diagram doesn't show all possible use cases but focuses on the most common and important ones.
+
+
+
+Image in folder............Q-1
