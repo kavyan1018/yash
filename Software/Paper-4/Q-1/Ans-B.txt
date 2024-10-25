@@ -1,0 +1,42 @@
+Description of Use Cases:
+    -->User Registration and Login: Customers register and log in to the system.
+    -->Browse Products: Customers search or browse through product categories.
+    -->Add to Cart: Customers add selected products to their shopping cart.
+    -->Checkout: Customers proceed to checkout with items in their cart.
+    -->Make Payment: Customers complete the transaction by making a secure payment.
+    -->View Order Status: Customers view the status of their orders.
+    -->Manage Products: Admin adds, updates, or deletes product listings.
+    -->Manage Orders: Admin views and updates order statuses.
+    -->View Sales Report: Admin generates reports on sales data.
+
+
+                         +------------------------+
+                         |   Online Shopping      |
+                         |       System           |
+                         +------------------------+
+                         |                        |
+                         |   +----------------+   |
+                         |   |   Customer    |   |
+                         |   +----------------+   |
+                         |                        |
+                         |   +----------------+   |
+                         |   |     Admin     |   |
+                         |   +----------------+   |
+                         +------------------------+
+
+Actors:
+    - Customer
+    - Admin
+
+Customer Use Cases:
+    1. Register & Login
+    2. Browse Products
+    3. Add to Cart
+    4. Checkout
+    5. Make Payment
+    6. View Order Status
+
+Admin Use Cases:
+    7. Manage Products
+    8. Manage Orders
+    9. View Sales Report
