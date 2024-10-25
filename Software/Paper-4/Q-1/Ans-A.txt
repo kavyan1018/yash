@@ -1,0 +1,108 @@
+Software Requirements Specification (SRS) is a document that describes the intended purpose, functionality, and behavior of a software application. It is created during the requirements phase of software development to provide a detailed overview of software expectations, specifications, and constraints.
+
+### Properties of a Good SRS
+A well-written SRS should be:
+
+1. Complete: It should contain all essential requirements and be comprehensive enough for developers to understand the software's expected functionality.
+2. Correct: The document should accurately reflect the client’s needs and the intended function of the software.
+3. Unambiguous: The requirements should be clear and interpretable in only one way, avoiding vague terms.
+4. Verifiable: It should be possible to develop test cases to validate each requirement.
+5. Consistent: The SRS should not contain conflicting requirements or descriptions.
+6. Modifiable: The document should be structured to accommodate changes easily without affecting unrelated sections.
+7. Traceable: Each requirement should have a unique identifier for easy tracking and traceability throughout the development process.
+
+---
+
+### SRS for an Online Shopping System
+Following the IEEE SRS format, here is a basic outline for an Online Shopping System:
+
+---
+
+#### 1. Introduction
+
+1.1 Purpose  
+The purpose of this document is to describe the functional and non-functional requirements for an Online Shopping System (OSS). The document is intended for use by the development team to implement a fully-functional e-commerce website.
+
+1.2 Scope  
+The OSS will allow customers to browse products, place orders, and make payments online. The system will also include an admin interface for managing products, tracking orders, and viewing sales reports.
+
+1.3 Definitions, Acronyms, and Abbreviations  
+- OSS: Online Shopping System
+- SKU: Stock Keeping Unit
+- Admin: Administrator with privileges to manage the system
+
+1.4 References  
+IEEE 830-1998 - Recommended Practice for Software Requirements Specifications
+
+1.5 Overview  
+The OSS will be accessible via web browsers, allowing users to shop and pay for products securely. The admin panel will allow the admin to manage inventory, view orders, and update product details.
+
+---
+
+#### 2. Overall Description
+
+2.1 Product Perspective  
+The OSS is a standalone web application designed to operate on any device with a web browser. It consists of a customer interface and an admin interface.
+
+2.2 Product Functions  
+- Customer can browse, search, and filter products.
+- Customer can add products to the cart, view cart, and checkout.
+- Customer can make secure payments.
+- Admin can manage inventory, update product listings, and view orders.
+
+2.3 User Characteristics  
+Users will have basic computer and internet knowledge. Customers range from general users to business clients, while admins require familiarity with product management.
+
+2.4 Constraints  
+- The system must comply with the PCI-DSS standard for online payment security.
+- The system should be accessible on major web browsers (Chrome, Firefox, Safari).
+
+2.5 Assumptions and Dependencies  
+- Internet connectivity is available for accessing the OSS.
+- Payment gateway integration is provided by a third-party API.
+
+---
+
+#### 3. Specific Requirements
+
+3.1 Functional Requirements  
+- User Registration and Login  
+  - The system shall allow users to register with personal details.
+  - The system shall allow users to log in using an email and password.
+
+- Product Browsing and Search  
+  - The system shall allow users to search products by name, category, and price range.
+  - The system shall display product details, including name, description, price, and availability.
+
+- Shopping Cart  
+  - The system shall allow users to add/remove items from the cart.
+  - The system shall update the cart total when items are added or removed.
+
+- Checkout and Payment  
+  - The system shall allow users to enter a shipping address and choose a payment method.
+  - The system shall process payments securely.
+
+- Order Tracking  
+  - The system shall allow users to view the status of their orders.
+
+- Admin Product Management  
+  - The admin shall be able to add, update, or delete products.
+  - The admin shall view order history and update order status.
+
+3.2 Non-Functional Requirements
+- Usability: The system should be easy to navigate with clear labels and a user-friendly interface.
+- Reliability: The system should be available 99.9% of the time.
+- Performance: Page load time should be under 3 seconds for a standard internet connection.
+- Security: The system should encrypt sensitive data and comply with PCI-DSS for payments.
+- Scalability: The system should support up to 100,000 concurrent users.
+
+---
+
+#### 4. Appendices
+
+- Appendix A: Glossary
+- Appendix B: Assumptions and Dependencies
+
+---
+
+This SRS provides a foundational document for developing an online shopping platform that addresses customer and admin needs. Each section aims to ensure that the OSS meets usability, functionality, and security requirements, offering a seamless shopping experience for end users.
