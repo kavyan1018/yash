@@ -1,0 +1,86 @@
+System Testing Examples:
+--------------------------------
+1) Usability Testing
+Testing if a shopping website's checkout process is intuitive
+Verifying error messages are clear and helpful
+Checking if navigation menus are easy to understand
+
+
+2) Performance Testing
+Testing if the system can handle 1000 concurrent users
+Measuring response time when uploading large files
+Checking database query performance under heavy load
+
+
+3) Recovery Testing
+Pulling network cable during transaction processing
+Forcing system shutdown during data backup
+Testing auto-save features during power failure
+
+
+4)Security Testing
+Attempting SQL injection attacks
+Testing password policies and authentication
+Verifying encryption of sensitive data
+
+
+Integration Testing Examples:
+--------------------------------
+Tests interactions between different modules/components
+Verifies data flow and communication between integrated units
+
+---> Key techniques:
+Big Bang: All components integrated simultaneously
+Top-Down: Starts with top-level modules, uses stubs for lower modules
+Bottom-Up: Starts with lowest-level modules, uses drivers for higher modules
+Sandwich/Hybrid: Combines top-down and bottom-up approaches
+Incremental: Components integrated one at a time
+
+Integration Testing Examples:
+--> Big Bang Testing
+Example: E-commerce system
+Payment Module +
+Inventory Module +    → All tested together
+Shopping Cart +
+User Account
+
+--> Top-Down Testing
+Banking System Example
+Level 1: Main Banking Interface
+Level 2: ┣━ Account Management (Stub)
+         ┗━ Transaction Processing (Stub)
+Level 3: ┣━ Savings Account
+         ┣━ Current Account
+         ┗━ Transaction Types
+
+--> Bottom-Up Testing
+CRM System Example
+Level 1: ┣━ Database Operations
+         ┗━ Data Validation
+Level 2: ┣━ Customer Records (Driver)
+         ┗━ Contact Management (Driver)
+Level 3: Main CRM Interface (Driver)
+
+--> Incremental Example:
+python Testing user authentication flow
+Step 1: Test login module
+def test_login():
+    assert login("user", "pass") == True
+
+Step 2: Add session management
+def test_login_with_session():
+    session = login("user", "pass")
+    assert verify_session(session) == True
+
+Step 3: Add permissions
+def test_login_with_permissions():
+    session = login("user", "pass")
+    assert check_permissions(session, "read") == True
+
+
+--> Practical Tips: 
+Create test cases that cover both positive and negative scenarios
+Use test environments that mirror production
+Automate repetitive tests where possible
+Document all test cases and results
+Prioritize critical paths and high-risk areas
