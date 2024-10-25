@@ -1,0 +1,97 @@
+Below is an ER diagram (ERD) for a Hospital Management System (HMS) that illustrates how various entities are related. Key assumptions made include:
+
+1. Patients are registered in the system and can have multiple Appointments with different Doctors.
+2. Doctors are associated with specific Departments (e.g., Cardiology, Neurology).
+3. Each Appointment** can involve various Treatments and Lab Tests.
+4. Bills are generated based on the Treatments and Lab Tests for each patient visit.
+
+---
+
+### Entity-Relationship Diagram (ERD)
+
+#### Entities and Attributes
+
+1. Patient
+   - Patient_ID (PK)
+   - Name
+   - Age
+   - Gender
+   - Address
+   - Contact_Info
+   - Medical_History
+
+2. Doctor
+   - Doctor_ID (PK)
+   - Name
+   - Specialization
+   - Department_ID (FK)
+   - Contact_Info
+
+3. Department
+   - Department_ID (PK)
+   - Department_Name
+   - Location
+
+4. Appointment
+   - Appointment_ID (PK)
+   - Patient_ID (FK)
+   - Doctor_ID (FK)
+   - Date
+   - Time
+   - Status
+
+5. Treatment
+   - Treatment_ID (PK)
+   - Treatment_Description
+   - Cost
+   - Appointment_ID (FK)
+
+6. Lab_Test
+   - Test_ID (PK)
+   - Test_Name
+   - Test_Type
+   - Cost
+   - Appointment_ID (FK)
+
+7. Billing
+   - Bill_ID (PK)
+   - Patient_ID (FK)
+   - Appointment_ID (FK)
+   - Total_Amount
+   - Payment_Status
+
+---
+
+#### Relationships
+
+1. Patient - Appointment: 
+   - A patient can have multiple appointments, but each appointment is for one patient.
+   - Relationship: One-to-Many (1:N)
+
+2. Doctor - Appointment: 
+   - A doctor can handle multiple appointments, but each appointment is handled by one doctor.
+   - **Relationship**: One-to-Many (1:N)
+
+3. Department - Doctor:
+   - A department can have multiple doctors, but each doctor belongs to one department.
+   - Relationship: One-to-Many (1:N)
+
+4. Appointment - Treatment:
+   - Each appointment may include multiple treatments, but each treatment is tied to a specific appointment.
+   - **Relationship**: One-to-Many (1:N)
+
+5. Appointment - Lab_Test:
+   - Each appointment may include multiple lab tests, but each lab test is tied to a specific appointment.
+   - **Relationship**: One-to-Many (1:N)
+
+6. Patient - Billing:
+   - A patient may have multiple bills (one for each appointment), but each bill is generated for one patient.
+   - **Relationship**: One-to-Many (1:N)
+
+7. Appointment - Billing:
+   - Each appointment generates a bill, and each bill is tied to a single appointment.
+   - Relationship: One-to-One (1:1)
+
+---
+
+I'll create this ERD diagram.   in the photo name : Ans-B.webp
