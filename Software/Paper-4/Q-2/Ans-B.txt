@@ -1,0 +1,13 @@
+Gantt Chart in : Ans-B.png
+
+
+over View Gantt Chart Diagram
+
+|   Phases                | Days               |
+|-------------------------|--------------------|
+| Requirement Analysis    | █████████         |
+| System Design           | ██████████████    |
+| Implementation          | ██████████████████████████ |
+| Testing                 | ██████████████████████     |
+| Deployment              | ████████          |
+| Maintenance             | ▒▒▒▒▒▒▒▒          |
