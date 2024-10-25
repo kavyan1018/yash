@@ -1,0 +1,62 @@
+Level 0 DFD :
+-------------------
+The Level 0 DFD represents the entire Online Shopping System as a single process with interactions with external entities.
+
+Entities and Data Flows
+
+Customer:
+    ->Sends Browse Request and receives Product Details.
+    ->Sends Add to Cart and receives Cart Details.
+    ->Sends Place Order and receives Order Confirmation.
+    ->Sends Payment Details and receives Payment Confirmation.
+
+Admin:
+    -->Sends Manage Products and receives Product Status.
+    -->Sends View Orders and receives Order Details.
+
+Payment Gateway:
+-->Receives Payment Details and returns Payment Confirmation.
+
++------------------------------+
+|       Online Shopping        |
+|           System             |
++------------------------------+
+       ^               ^
+       |               |
+   Product         Order/
+   Details         Cart Details
+       |               |
+       v               v
++------------------------------+
+|           Customer           |
++------------------------------+
+
++------------------------------+
+|             Admin            |
++------------------------------+
+
++------------------------------+
+|        Payment Gateway       |
++------------------------------+
+
+
+
+
+
+Level 1 DFD :
+--------------------
+In the Level 1 DFD, we decompose the main system into major sub-processes:
+
+Major Processes
+    --->1.0 Manage User: Handle user registration and login.
+    --->2.0 Browse Products: Allow customers to search and view product details.
+    --->3.0 Manage Cart: Let customers add, remove, and view items in the cart.
+    --->4.0 Place Order: Customers finalize and place orders.
+    --->5.0 Process Payment: Payment gateway processes customer payments.
+    --->6.0 Manage Products (Admin): Admin can add, update, or delete products.
+    --->7.0 View Orders (Admin): Admin can view customer orders.
+
+Customer --> [1.0 Manage User] --> [2.0 Browse Products] <--> Product Database
+Customer <--> [3.0 Manage Cart] <--> Order Database
+Customer <--> [4.0 Place Order] <--> Order Database
+Customer --> [5.0 Process Payment] <--> Payment Gateway
