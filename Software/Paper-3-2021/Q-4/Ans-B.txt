@@ -1,0 +1,57 @@
+A test case in software testing is a set of actions, inputs, and conditions that are used to determine whether a feature or functionality of an application works as expected. Each test case typically includes a specific input and an expected output, allowing testers to verify that the application behaves as anticipated under various conditions.
+
+ Role of Test Cases in Software Testing
+Test cases play a crucial role in software testing as they:
+1. Ensure Quality: They verify that each feature or functionality meets the specified requirements, ensuring overall software quality.
+2. Detect Defects: Test cases help identify bugs and issues, reducing the risk of errors in the final product.
+3. Improve Consistency: Documented test cases ensure consistency in testing, especially when multiple testers work on the same project.
+4. Facilitate Communication: They act as a form of documentation, making it easier for stakeholders to understand what has been tested.
+
+ Example Test Cases for a Hospital Management System
+
+ 1. Patient Registration
+   - Test Case ID: TC001
+   - Description: Verify if the system allows registering a new patient.
+   - Steps: 
+     1. Go to the patient registration module.
+     2. Enter valid patient details (name, age, contact, address, etc.).
+     3. Click "Submit."
+   - Expected Result: Patient is registered, and a unique patient ID is generated.
+   - Actual Result: _(To be filled after test execution)_
+   - Status: Pass/Fail
+
+ 2. Appointment Booking
+   - Test Case ID: TC002
+   - Description: Check if an appointment can be scheduled with a doctor.
+   - Steps: 
+     1. Log in as a receptionist.
+     2. Choose a doctor and select an available time slot.
+     3. Enter patient details or select an existing patient.
+     4. Confirm the appointment.
+   - Expected Result: Appointment is successfully scheduled, and confirmation details are displayed.
+   - Actual Result: _(To be filled after test execution)_
+   - Status: Pass/Fail
+
+ 3. Billing and Payment Processing
+   - Test Case ID: TC003
+   - Description: Validate that the system correctly generates a bill for inpatient services.
+   - Steps: 
+     1. Select an inpatient for billing.
+     2. Verify all provided services are listed in the bill (consultations, medications, etc.).
+     3. Click "Generate Bill."
+   - Expected Result: The system generates an accurate, itemized bill for the inpatient.
+   - Actual Result: _(To be filled after test execution)_
+   - Status: Pass/Fail
+
+ 4. Lab Test Result Upload
+   - Test Case ID: TC004
+   - Description: Confirm that lab test results can be uploaded and associated with the correct patient.
+   - Steps: 
+     1. Access the lab test results module.
+     2. Select a patient and upload the test results.
+     3. Save the results.
+   - Expected Result: Test results are saved, and the patient can view them in their profile.
+   - Actual Result: _(To be filled after test execution)_
+   - Status: Pass/Fail
+
+These test cases help ensure that the hospital management system functions accurately and meets user requirements.
