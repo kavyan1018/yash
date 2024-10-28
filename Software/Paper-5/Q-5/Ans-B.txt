@@ -20,13 +20,13 @@ Key Differences Between Gantt and PERT Charts
 |-----------------------|---------------------------------------------------|---------------------------------------------------------------------------|
 |   Feature             |  Gantt Chart                                      |    PERT Chart                                                             |
 |-----------------------|---------------------------------------------------|---------------------------------------------------------------------------|
-| **Representation**    | Bar chart with tasks represented along a timeline | Flowchart/network diagram with tasks as nodes and dependencies as arrows  |
-| **Focus**             | Task duration, schedule, and progress             | Task dependencies, sequence, and project’s critical path                  |
-| **Timeline**          | Shows start and end dates of tasks                | Focuses more on task dependencies and sequencing than exact dates         |
-| **Complexity**        | Suits simpler or well-defined projects            | Ideal for complex, interdependent projects                                |
-| **Dependency**        | Dependencies are shown by connecting bars         | Dependencies are clearly represented by arrows between nodes              |
-| **Critical Path**     | Does not inherently emphasize the critical path   | Identifies the critical path, which is central to PERT analysis           |
-| **Best For**          | Projects with clearly defined tasks and schedules | Projects requiring detailed dependency and sequence analysis              |
+|   Representation      | Bar chart with tasks represented along a timeline | Flowchart/network diagram with tasks as nodes and dependencies as arrows  |
+|   Focus               | Task duration, schedule, and progress             | Task dependencies, sequence, and project’s critical path                  |
+|   Timeline            | Shows start and end dates of tasks                | Focuses more on task dependencies and sequencing than exact dates         |
+|   Complexity          | Suits simpler or well-defined projects            | Ideal for complex, interdependent projects                                |
+|   Dependency          | Dependencies are shown by connecting bars         | Dependencies are clearly represented by arrows between nodes              |
+|   Critical Path       | Does not inherently emphasize the critical path   | Identifies the critical path, which is central to PERT analysis           |
+|   Best For            | Projects with clearly defined tasks and schedules | Projects requiring detailed dependency and sequence analysis              |
 |-----------------------|---------------------------------------------------|---------------------------------------------------------------------------|
 
 In summary, Gantt charts are best for monitoring task progress over time, while **PERT charts** are valuable for analyzing dependencies and minimizing project duration through critical path management.
