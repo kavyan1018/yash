@@ -1,0 +1,152 @@
+
+Part in image: Ans-c.png
+
+Let me explain the function-oriented design approach for the ATM system:
+
+1. System Decomposition:
+The ATM system is broken down into major functions:
+
+A. Authentication (1.0)
+   - Validate Card (1.1)
+     - Read card data
+     - Check card validity
+   - Check PIN (1.2)
+     - Accept PIN input
+     - Verify PIN against database
+   - Block Card (1.3)
+     - Track invalid attempts
+     - Block card after limit exceeded
+
+B. Transaction Processing (2.0)
+   - Check Balance (2.1)
+     - Retrieve account balance
+     - Display balance
+   - Withdraw Money (2.2)
+     - Verify balance
+     - Process withdrawal
+     - Update account
+   - Deposit Money (2.3)
+     - Accept deposit
+     - Verify amount
+     - Update account
+   - Transfer Funds (2.4)
+     - Verify accounts
+     - Process transfer
+     - Update both accounts
+
+C. Receipt Generation (3.0)
+   - Generate Receipt (3.1)
+     - Format transaction details
+     - Add timestamp
+   - Print Receipt (3.2)
+     - Print physical receipt
+     - Handle printer errors
+   - Send SMS Alert (3.3)
+     - Format SMS message
+     - Send to banking system
+
+2. Data Dictionary:
+
+```
+Data Elements:
+- Card_Number: 16-digit numeric
+- PIN: 4-digit numeric
+- Account_Balance: Decimal number
+- Transaction_Amount: Decimal number
+- Transaction_Type: Enum {WITHDRAWAL, DEPOSIT, TRANSFER, BALANCE}
+- Receipt_Data: Structure containing transaction details
+```
+
+3. Data Flow Analysis:
+
+A. Input Data Flows:
+   - Card information
+   - PIN entry
+   - Transaction selection
+   - Amount entry
+   - Recipient account (for transfers)
+
+B. Output Data Flows:
+   - Balance display
+   - Transaction confirmation
+   - Error messages
+   - Receipt printing
+   - SMS notifications
+
+4. Function Specifications:
+
+Example for Withdraw Money (2.2):
+```
+Function: Withdraw_Money
+Input: 
+    - Account_Number
+    - Amount
+Output:
+    - Transaction_Status
+    - Updated_Balance
+Process:
+    1. Verify account balance
+    2. Check withdrawal limits
+    3. Process transaction
+    4. Update account balance
+    5. Trigger receipt generation
+Error Handling:
+    - Insufficient funds
+    - Invalid amount
+    - Hardware errors
+```
+
+5. Module Coupling and Cohesion:
+
+A. Coupling Examples:
+   - Authentication module must complete before Transaction Processing
+   - Receipt Generation depends on Transaction Processing output
+   - SMS alerts depend on transaction completion
+
+B. Cohesion Analysis:
+   - Authentication functions grouped together
+   - Transaction functions separated by type
+   - Output handling consolidated in Receipt module
+
+6. Design Benefits:
+
+A. Maintainability:
+   - Each function is independent
+   - Easy to modify individual modules
+   - Clear separation of concerns
+
+B. Testability:
+   - Functions can be tested independently
+   - Clear inputs and outputs
+   - Easy to mock dependencies
+
+C. Scalability:
+   - New transaction types can be added
+   - Additional authentication methods can be implemented
+   - Output formats can be extended
+
+7. Implementation Considerations:
+
+A. Error Handling:
+   - Each function includes error checking
+   - Standardized error responses
+   - Transaction rollback capability
+
+B. Security:
+   - Authentication before any transaction
+   - Encrypted communication
+   - Session management
+
+C. Performance:
+   - Optimized database queries
+   - Efficient state management
+   - Fast response times
+
+This function-oriented design approach helps in:
+1. Clear organization of system functionality
+2. Easy maintenance and updates
+3. Better error handling and security
+4. Simplified testing and debugging
+5. Scalable system architecture
+
+Would you like me to elaborate on any specific aspect of this function-oriented design or provide more details about any particular function?
