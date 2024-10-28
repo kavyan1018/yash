@@ -219,5 +219,3 @@ Best Practices:
 - Easier debugging
 - Enhanced reusability
 - Simplified understanding
-
-Would you like me to elaborate on any specific type of coupling or cohesion with more examples?

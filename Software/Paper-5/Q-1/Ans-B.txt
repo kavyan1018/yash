@@ -136,5 +136,3 @@ Risk Mitigation:
 5. Build a skilled project team
 
 While the Spiral Model adds complexity and potential overhead, its benefits in risk management and incremental development make it a suitable choice for an Online Student Admission System, especially considering the system's critical nature and integration requirements. The key is to carefully manage the process and ensure proper resource allocation.
-
-Would you like me to elaborate on any specific aspect of this analysis or discuss alternative development models for comparison?
