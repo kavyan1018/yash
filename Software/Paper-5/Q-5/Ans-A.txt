@@ -24,8 +24,8 @@ Key Tasks Involved in Software Project Management
    - Dependency Management: Identifying tasks that depend on the completion of other tasks to ensure smooth workflow.
 
 5. Resource Allocation
-   - **Team Assignment**: Assigning specific roles and responsibilities to each team member.
-   - **Resource Management**: Managing and monitoring resources to ensure they are used effectively throughout the project.
+   - Team Assignment: Assigning specific roles and responsibilities to each team member.
+   - Resource Management: Managing and monitoring resources to ensure they are used effectively throughout the project.
 
 6. Quality Assurance and Testing
    - Standards Definition: Setting quality standards that the software must meet, based on industry practices and client requirements.
