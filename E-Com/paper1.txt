@@ -1,0 +1,322 @@
+1(a) What is an e-paper? List the advantages and disadvantages of e-papers. (10 marks)
+
+Definition of E-Paper (2 marks):
+An e-paper (electronic paper) is a digital version of a printed newspaper, which can be read on electronic devices like smartphones, tablets, or computers. It offers the same layout and content as traditional newspapers.
+
+--> Advantages of E-Paper (4 marks):
+----------------------------------------
+Eco-Friendly – Saves paper and reduces deforestation.
+
+Easily Accessible – Can be read anytime, anywhere with internet.
+
+Cost-Effective – Reduces printing and distribution costs.
+
+Real-Time Updates – News can be updated instantly.
+
+
+--> Disadvantages of E-Paper (4 marks):
+----------------------------------------
+Requires Internet Connection – Cannot be accessed offline.
+
+Needs Digital Device – Not usable without smartphones or computers.
+
+Eye Strain – Continuous screen reading may cause discomfort.
+
+Not Preferred by All – Some people still prefer the physical newspaper feel.
+
+------------------------------------------------------Q-1(B)----------------------------------------------------
+
+
+1(b) What is meant by Internet Commerce? Explain any two main business models. (10 marks)
+
+Definition of Internet Commerce (3 marks):
+Internet Commerce, also known as e-commerce, refers to the buying and selling of goods or services through the Internet, along with online transactions and data exchange.
+
+--> Two Main Business Models (7 marks):
+---------------------------------------------------------
+1) Business-to-Consumer (B2C) (3.5 marks)
+Definition:
+In the B2C model, businesses sell their products or services directly to individual consumers using online platforms such as websites or mobile apps.
+
+How it Works:
+Consumers visit a business’s e-commerce site, browse products, place orders, and make payments online. The business processes the order and delivers the product or service.
+
+Key Features:
+
+Direct interaction between business and end-user.
+
+Easy navigation and user-friendly interface.
+
+Includes features like online catalogs, shopping carts, and secure payment gateways.
+
+Examples:
+
+Amazon – Sells a wide range of products directly to consumers.
+
+eBay – Allows businesses and individuals to sell directly to customers.
+
+
+------------------------------------------------------------------------------
+2) Business-to-Business (B2B) (3.5 marks)
+Definition:
+In the B2B model, companies sell goods or services to other businesses rather than individual consumers. These transactions often involve large quantities or specialized services.
+
+How it Works:
+A business (buyer) places bulk orders with another business (seller) through an online portal or platform. These platforms support quotations, negotiations, and repeated transactions.
+
+Key Features:
+
+Larger order volumes.
+
+Long-term relationships and contracts.
+
+Custom pricing and delivery terms.
+
+Examples:
+
+Alibaba – A platform where manufacturers and wholesalers sell to retailers globally.
+
+ThomasNet – Connects industrial buyers with suppliers in the US.
+
+
+------------------------------------------------------Q-2(A)----------------------------------------------------
+
+2(a) Explain any two EDI standards. (5 Marks)
+----------------------------------------------------------
+1. ANSI X12 (2.5 Marks)
+Full Form: American National Standards Institute X12
+
+Developed By: American National Standards Institute (ANSI)
+
+Region of Use: Mainly used in North America
+
+Purpose:
+ANSI X12 is a widely used EDI standard for electronic business transactions such as purchase orders, invoices, shipping notices, and other documents.
+
+Features:
+
+Structured data format for B2B communication.
+
+Ensures accuracy and security in data exchange between organizations.
+
+Example:
+A retail company sends a purchase order to a supplier using ANSI X12 format electronically.
+
+2. EDIFACT (Electronic Data Interchange for Administration, Commerce and Transport) (2.5 Marks)
+-----------------------------------------------------------
+Developed By: United Nations
+
+Region of Use: Used internationally, especially in Europe and global trade
+
+Purpose:
+EDIFACT provides a standard format for exchanging business data across different countries and industries. It covers administrative, commercial, and transport sectors.
+
+Features:
+
+Promotes international trade by enabling seamless data exchange.
+
+Supports complex document structures and multi-language capabilities.
+
+Example:
+A European manufacturer shares shipping and billing data with partners using the EDIFACT standard.
+
+
+
+------------------------------------------------------Q-2(B)----------------------------------------------------
+2(B)
+Explain any five strategies to increase visibility of your e-commerce website. (5 marks)
+
+1) Search Engine Optimization (SEO): Boosts site ranking on Google.
+
+2)Social Media Marketing: Promotes products on Facebook, Instagram, etc.
+
+3)Email Marketing: Sends offers and updates to customers.
+
+4)Content Marketing: Blogs, videos, and guides bring organic traffic.
+
+5)Google Ads & Paid Promotion: Increases reach with targeted ads.
+
+
+1. Search Engine Optimization (SEO) (1 mark)
+SEO helps improve your website’s ranking on search engines like Google. By using relevant keywords, meta tags, and optimizing content, more users can find your site organically.
+
+2. Social Media Marketing (1 mark)
+Using platforms like Facebook, Instagram, and Twitter to promote products, run ads, and engage with users helps increase brand visibility and drive traffic to the website.
+
+3. Email Marketing (1 mark)
+Sending newsletters, offers, and product updates to subscribers keeps customers informed and encourages them to revisit your site for purchases.
+
+4. Content Marketing (1 mark)
+Creating high-quality content like blogs, videos, how-to guides, and infographics attracts organic visitors and builds trust with potential customers.
+
+5. Google Ads & Paid Promotion (1 mark)
+Running paid advertisements on platforms like Google Ads or Facebook Ads ensures your website appears in front of a targeted audience, increasing reach and traffic quickly.
+
+
+
+
+------------------------------------------------------Q-3(A)----------------------------------------------------
+3(a) 
+--> What are the different components in the online delivery of goods and services? Explain their role. (5 marks)
+
+1. E-commerce Platform
+Role:The website or app where customers browse, select, and place orders. It manages product listings, cart, and checkout process.
+
+2. Payment Gateway
+Role:Facilitates secure online transactions between customers and sellers by encrypting payment details (e.g., Razorpay, PayPal).
+
+3. Order Management System (OMS)
+Role:Handles order processing, inventory updates, confirmation emails, and tracking. Ensures smooth order lifecycle.
+
+4. Logistics & Delivery Partners
+Role:Responsible for shipping and delivering the physical goods to customers. Examples: Delhivery, Blue Dart, FedEx.
+
+5. Customer Support System
+Role:Assists users with queries, complaints, returns, and refunds to maintain customer satisfaction and trust.
+
+
+------------------------------------------------------Q-3(B)----------------------------------------------------
+3(b) How can E-commerce portals make shopping secure? (5 marks)
+E-commerce portals can implement several strategies to ensure secure shopping experiences for users. Here are five key methods, each worth 1 mark:
+
+1. Secure Payment Gateways
+Use encrypted and trusted payment gateways (e.g., Stripe, PayPal) to protect financial data.
+
+2. SSL Certificates
+Ensure the website uses HTTPS (SSL encryption) to protect user information during transmission.
+
+3. Two-Factor Authentication (2FA)
+Adds an extra layer of security by requiring users to verify their identity through OTP or authentication apps.
+
+4. Regular Security Audits
+Conduct vulnerability assessments and patch security loopholes to prevent hacking or data breaches.
+
+5. Privacy Policies & Data Protection
+Clearly state data usage policies and comply with regulations like GDPR to build user trust and legal compliance.
+
+
+------------------------------------------------------Q-4(A)----------------------------------------------------
+4(a) What is meant by Inter-organisational e-commerce? How does it differ from Intra-organisational e-commerce? (5 marks)
+Inter-organisational e-commerce (2.5 marks)
+Definition:
+It refers to the electronic exchange of products, services, or information between two or more organizations.
+
+Example:
+Transactions between a manufacturer and a supplier, or a wholesaler and a retailer via EDI or B2B platforms.
+
+Purpose:
+To streamline operations, improve supply chain efficiency, and reduce transaction costs between companies.
+
+Intra-organisational e-commerce (2.5 marks)
+Definition:
+It involves electronic activities within a single organization, such as communication between departments or internal procurement.
+
+Example:
+An internal portal used for HR services, internal emails, or procurement systems.
+
+Purpose:
+To improve internal efficiency, communication, and decision-making processes.
+
+
+------------------------------------------------------Q-4(B)----------------------------------------------------
+
+4(b) List any five cyber offences and related penalties under IT Act, 2000. (5 marks – 1 mark each)
+
+1. Hacking (Section 66)
+Offence: Unauthorized access to a computer system.
+
+Penalty: Up to 3 years imprisonment or ₹5 lakh fine, or both.
+
+2. Identity Theft (Section 66C)
+Offence: Using someone else's identity documents (e.g., Aadhar, PAN).
+
+Penalty: Up to 3 years imprisonment and/or ₹1 lakh fine.
+
+3. Cyber Stalking (Section 66A & 354D of IPC)
+Offence: Repeatedly following or contacting someone online.
+
+Penalty: Up to 3 years imprisonment and fine.
+
+4. Publishing Obscene Material (Section 67)
+Offence: Publishing/transmitting obscene content online.
+
+Penalty: First conviction – up to 3 years jail and ₹5 lakh fine.
+
+5. Data Theft (Section 43 & 66)
+Offence: Stealing or copying sensitive data without permission.
+
+Penalty: Up to 3 years imprisonment and ₹5 lakh compensation.
+
+
+------------------------------------------------------Q-5(A)----------------------------------------------------
+5(a) Explain the benefits of E-commerce to organisations, customers and society at large. (5 marks – 1 mark each)
+
+1. Benefits to Organisations:
+Reduces operational costs (no physical stores needed).
+
+Expands market reach globally.
+Provides real-time data and customer insights.
+
+2. Benefits to Customers:
+24/7 shopping convenience.
+
+More product variety and easy price comparison.
+Doorstep delivery and secure payment options.
+
+3. Benefits to Society:
+Encourages digital literacy and innovation.
+Reduces traffic congestion and pollution (less travel).
+Creates employment in logistics, tech, and digital marketing.
+
+4. Environmental Benefits:
+Minimizes the need for paper-based transactions.
+Promotes eco-friendly digital communication.
+
+5. Faster Service & Support:
+Chatbots, FAQs, and customer service tools improve user experience and issue resolution.
+
+
+------------------------------------------------------Q-5(B)----------------------------------------------------
+5(b) With the help of a block diagram, explain the E-commerce workflow. (5 marks)
+
+Block Diagram:
+[Customer] 
+     ↓
+[Online Storefront (Website/App)]
+     ↓
+[Shopping Cart → Checkout]
+     ↓
+[Payment Gateway]
+     ↓
+[Order Management System]
+     ↓
+[Inventory & Warehouse]
+     ↓
+[Logistics/Delivery Partner]
+     ↓
+[Customer Receives Product]
+
+---------------------------------------
+Explanation of Workflow (1 mark):
+---------------------------------------
+
+1) Customer Browses:
+The customer visits the e-commerce website or app and explores available products or services.
+
+2) Add to Cart & Checkout:
+Selected items are added to the cart, and the customer proceeds to checkout to finalize the purchase.
+
+3) Secure Payment:
+Payment is processed through a secure payment gateway using credit/debit cards, UPI, net banking, or wallets.
+
+4) Order Processing & Inventory Update:
+The Order Management System (OMS) validates the order, updates stock levels, and forwards details to the warehouse.
+
+5) Warehouse & Shipping:
+The product is packed and dispatched from the warehouse to the customer.
+
+6) Logistics & Delivery:
+Delivery partners transport and deliver the product to the customer's address.
+
+7) Customer Support (Post-sale):
+Any issues like returns, replacements, or refunds are handled by the customer support team.
