@@ -1,0 +1,364 @@
+(2022)
+
+----------------------------------------------- 1-(a) -----------------------------------------------
+
+Online Grocery Shopping Procedure with Reference to a Grocery Portal (e.g., BigBasket):
+
+Online grocery shopping has become a convenient method for purchasing daily essentials. Platforms like BigBasket, Amazon Fresh, or Blinkit provide an easy-to-use interface for ordering groceries from home.
+
+--> Procedure for Online Grocery Shopping:
+Sign Up / Log In
+Visit the grocery portal (e.g., www.bigbasket.com) and sign up or log in using email or mobile number.
+
+--> Search and Select Products
+Browse through categories (e.g., fruits, vegetables, dairy) or use the search bar to find items. Add desired products to the cart.
+
+--> Review Cart and Apply Offers
+Review selected items, apply promo codes, and check for any discounts or offers.
+
+--> Select Delivery Slot
+Choose a convenient delivery date and time slot available in your area.
+
+--> Make Payment
+Choose a payment method – credit/debit card, UPI, net banking, or cash on delivery (COD).
+
+--> Order Confirmation and Delivery
+Once the order is placed, you receive an SMS/email confirmation. The groceries are delivered at the scheduled time.
+
+Advantages of Online Grocery Shopping:
+--> Convenience: Shop from home anytime.
+--> Time-saving: No need to stand in queues.
+--> Home Delivery: Products are delivered to your doorstep.
+--> Wide Variety: Access to a large range of products and brands.
+--> Offers and Discounts: Regular promotions and cashback offers.
+
+Disadvantages of Online Grocery Shopping:
+--> Delivery Delays: Sometimes delivery is delayed due to high demand.
+--> Product Quality Issues: You can't check the freshness or quality before purchase.
+--> Delivery Charges: Extra charges may apply for small orders.
+--> Internet Dependency: Requires a smartphone or computer with internet access.
+
+
+----------------------------------------------- 1-(B) -----------------------------------------------
+--> 1. B2B (Business to Business)
+Characteristics:
+
+Involves transactions between two businesses.
+Larger order volumes and longer sales cycles.
+Prices are often negotiable and involve contracts.
+Requires strong supply chain and logistics management.
+
+Example:
+Alibaba – A business platform where wholesalers and manufacturers sell products in bulk to other businesses.
+
+
+--> 2. B2C (Business to Consumer)
+Characteristics:
+
+Involves transactions between businesses and end-users.
+Focus on user experience, marketing, and convenience.
+Prices are fixed and listed on the platform.
+Includes retail sales through online platforms.
+
+Example:
+Amazon – A retailer that sells goods directly to consumers.
+
+--> 3. C2B (Consumer to Business)
+Characteristics:
+Individuals offer products or services to businesses.
+Reverse of traditional business models.
+Common in freelancing, content creation, and influencer marketing.
+
+Example:
+Fiverr or Upwork – Platforms where freelancers offer services to businesses.
+
+--> 4. C2C (Consumer to Consumer)
+Characteristics:
+Transactions take place directly between consumers.
+Usually facilitated by a third-party platform.
+Allows buying and selling of used or second-hand items.
+
+Example:
+OLX or eBay – Platforms where individuals sell items to other individuals.
+
+
+----------------------------------------------- 2-(A) -----------------------------------------------
+
+E-commerce Workflow Explanation with Block Diagram
+Block Diagram of E-commerce Workflow:
+                                                Customer
+                                                   ↓
+                                                Online Storefront (Website/App)
+                                                   ↓
+                                                Product Selection
+                                                   ↓
+                                                Shopping Cart
+                                                   ↓
+                                                Checkout Process
+                                                   ↓
+                                                Payment Gateway
+                                                   ↓
+                                                Order Confirmation
+                                                   ↓
+                                                Inventory Management System
+                                                   ↓
+                                                Shipping & Delivery System
+                                                   ↓
+                                                Customer Feedback / Support
+
+
+Explanation of Each Step:
+1. Customer: The user who visits the online store to browse and purchase products.
+2. Online Storefront: The website or mobile app where products are displayed for customers to view and select.
+3. Product Selection: Customers choose products and add them to their shopping cart.
+4. Shopping Cart: A virtual cart where selected products are stored until checkout.
+5. Checkout Process: Customers review their cart, enter shipping information, and proceed to payment.
+6. Payment Gateway: A secure system that processes the payment transaction.
+7. Order Confirmation: After payment, customers receive an order confirmation via email or SMS.
+8. Inventory Management System: The backend system that tracks product availability and stock levels.
+9. Shipping & Delivery System: The logistics system that manages the delivery of products to customers.
+10. Customer Feedback / Support: Customers can provide feedback or seek support for their orders.
+
+
+
+
+----------------------------------------------- 2-(B) -----------------------------------------------
+
+1. Mobile Wallets and UPI Payments
+Explanation:
+Mobile wallets like Google Pay, PhonePe, Paytm, and UPI-based systems allow users to make instant digital payments via smartphones.
+
+Impact:-
+Easy and fast checkout process.
+Reduced dependence on cash.
+Improved security with two-factor authentication and biometric access.
+
+2. Progressive Web Apps (PWAs)
+Explanation:
+PWAs are mobile-optimized websites that behave like native mobile apps. They can be accessed via a browser but offer app-like features such as offline usage, push notifications, and home screen icons.
+
+Impact:-
+Faster loading and smoother experience.
+No need to download an app from a store.
+Increases reach and user engagement, especially in regions with limited internet.
+
+3. Voice Commerce
+Explanation:
+This trend involves shopping using voice commands via voice assistants such as Alexa, Siri, or Google Assistant.
+
+Impact:-
+Makes shopping more convenient and hands-free.
+Helpful for users with disabilities or those multitasking.
+Growing integration with smart home devices.
+
+4. Personalized Shopping Experience
+Explanation:
+Mobile apps and websites use AI (Artificial Intelligence) and Machine Learning to study user behavior, past purchases, and preferences to provide personalized recommendations and offers.
+
+Impact:-
+Increases user satisfaction and loyalty.
+Boosts conversion rates.
+Provides a unique shopping journey for every customer.
+
+5. Augmented Reality (AR) Integration
+Explanation:
+AR allows customers to see a virtual representation of a product in their environment before purchasing. For example, trying on glasses (Lenskart) or placing furniture in a room (IKEA).
+
+Impact:-
+Enhances customer confidence in online purchases.
+Reduces product return rates.
+Improves overall customer experience and engagement.
+
+
+
+----------------------------------------------- 3-(A) -----------------------------------------------
+Write a short note on transplanted real world business models.
+
+What are Transplanted Real World Business Models?
+
+These are traditional offline business models (like retail shops, classrooms, taxis, etc.) that have been adapted to work in an online or digital environment. The core idea of the business remains the same, but the method of delivering products or services changes with the help of the internet and digital tools.
+
+Examples of Transplanted Models:
+
+Retail to E-Commerce:
+Offline model: Buying clothes from a local store.
+Online (transplanted): Shopping from Flipkart or Amazon.
+The basic model of selling goods is the same, but the platform is now online.
+
+Cab Services:
+Offline: Booking a taxi from a taxi stand.
+Online: Using Uber or Ola to book a ride via mobile app.
+The traditional taxi service is now managed through a digital app.
+
+Education:
+Offline: Attending classes in a school or coaching center.
+Online: Learning via BYJU'S, Unacademy, or Coursera.
+The teaching model is the same, but delivery is now digital.
+
+Banking Services:
+Offline: Visiting a bank for transactions.
+Online: Using net banking or mobile banking apps.
+
+Features:
+Adopts digital tools like websites and apps.
+Often involves logistics and delivery partners.
+Maintains business identity while using modern technology.
+Allows better customer reach and convenience.
+
+
+----------------------------------------------- 3-(B) -----------------------------------------------
+
+--> What is e-paper? List the advantages and disadvantages of e-papers.
+
+Definition of E-paper:
+An e-paper (electronic paper) is the digital version of a newspaper or magazine that can be read using electronic devices like smartphones, tablets, or computers.
+
+Example: The Times of India E-paper, The Hindu E-paper, etc.
+
+Advantages of E-papers:
+-----------------------------
+Environment-Friendly:
+No paper or ink is used, which helps in saving trees and reducing pollution.
+
+Easy Access:
+You can read the e-paper anytime, from anywhere in the world, as long as you have internet.
+
+Cost Saving:
+Many e-papers are free or cheaper than printed newspapers.
+
+Interactive and Searchable:
+Some e-papers have hyperlinks, videos, and a search option for finding articles quickly.
+
+Storage and Archiving:
+You can store months of issues on your device without taking physical space.
+
+Disadvantages of E-papers:
+-----------------------------
+Requires Internet and Devices:
+Not everyone has access to smartphones, computers, or stable internet.
+
+Eye Strain:
+Long reading time on screens can cause eye fatigue or headaches.
+
+Not Preferred by All:
+Older generations or non-tech-savvy users may still prefer printed papers.
+
+Battery Dependent:
+You cannot read without a charged device.
+
+Data Privacy Concerns:
+Some e-paper apps may collect user data for advertisements.
+
+
+----------------------------------------------- 4-(A) -----------------------------------------------
+
+(a) How can e-commerce portals make shopping secure?
+
+--> To build trust and protect customer data, e-commerce websites use various security techniques. Below are key methods to make online shopping secure:
+
+1. SSL Certificates (Secure Sockets Layer):
+Encrypts data during transmission.
+Ensures that customer information like credit card numbers and passwords are protected from hackers.
+HTTPS (instead of HTTP) in URLs indicates SSL is active.
+
+2. Secure Payment Gateways:
+Use trusted services like PayPal, Razorpay, or Stripe.
+These gateways handle sensitive financial data securely.
+Often include features like OTP (One-Time Password) verification.
+
+3. Two-Factor Authentication (2FA):
+Adds an extra layer of protection.
+Users need to verify login with OTP or authentication apps (like Google Authenticator).
+
+4. Data Encryption:
+All stored customer data (like addresses, card info) is encrypted.
+Prevents misuse even if a breach occurs.
+
+5. Fraud Detection and AI Monitoring:
+Uses AI tools to track suspicious behavior (e.g., multiple failed login attempts, unusual transactions).
+Automatically flags or blocks these activities.
+
+6. Privacy Policies and User Consent:
+Clear data usage policies.
+Customers are informed and must give consent before data is collected.
+
+
+------------------------------------------------ 4-(B) -----------------------------------------------
+
+(b) Explain M-commerce application flow.
+
+--> M-commerce (Mobile Commerce) is buying and selling of goods/services through mobile devices using apps or mobile-optimized websites.
+
+---) M-Commerce Application Flow (Step-by-Step):
+User Registration/Login:
+Users sign up or log in using their mobile number, email, or social accounts.
+
+Product Browsing:
+Customers explore items via categories, search bars, or recommendations.
+Includes product images, descriptions, prices, and ratings.
+
+Cart & Wishlist Management:
+Users can add items to cart or wishlist for future purchase.
+Cart updates in real-time.
+
+Checkout & Payment:
+Choose delivery address and payment method (UPI, credit/debit card, wallet).
+Secure payment gateway processes the transaction.
+
+Order Confirmation:
+After successful payment, a confirmation message and receipt are shown.
+Email/SMS notifications are sent.
+
+Order Tracking:
+Users can track their order status from warehouse to delivery.
+Push notifications keep users updated.
+
+Delivery & Feedback:
+Once the order is delivered, users can rate the product or service.
+Helps improve seller credibility.
+
+
+
+----------------------------------------------- 5-(A) -----------------------------------------------
+(a) How did shopping experience change with the advent of E-commerce? Explain with an example.
+
+Before E-commerce (Traditional Shopping):
+--------------------------------------
+Customers had to visit physical stores.
+Shopping was limited by store hours and location.
+Limited product options available at local shops.
+Required manual payments (cash, card swipe).
+Time-consuming process (travel, wait in line).
+
+
+After E-commerce (Online Shopping):
+--------------------------------------
+Customers can shop 24/7 from anywhere using the internet.
+Access to a wider variety of products, brands, and price comparisons.
+Easy payment through digital modes (UPI, Net Banking, Cards, Wallets).
+Home delivery of goods.
+Option to return/exchange items if unsatisfied.
+
+Example:
+------------------
+Before: A customer had to visit a mall to buy a smartphone, check prices manually at different stores, and carry it home.
+After: Using Amazon or Flipkart, the same customer can browse multiple phones, compare prices and reviews, apply filters, pay online, and receive the phone at their doorstep.
+
+
+----------------------------------------------- 5-(B) -----------------------------------------------
+
+(b) List any five cyber offences and related penalties under IT Act, 2000.
+
+Here are five major cyber offences and their penalties as per the Information Technology Act, 2000:
+
+|   Cyber Offence               | Descriptions                                                            | Penalty under IT Act, 2000                      |
+| ------------------------------| ----------------------------------------------------------------------- | ------------------------------------------------|
+| 1. Hacking                    | Unauthorized access to or damage of computer systems or networks.       | Imprisonment up to 3 years and/or ₹5 lakh fine. |
+| 2. Identity Theft             | Stealing someone's personal data (e.g., Aadhaar, email, card info).     | Imprisonment up to 3 years and/or ₹1 lakh fine. |
+| 3. Cyber Stalking             | Harassing someone online through messages, emails, or tracking.         | Imprisonment up to 3 years and/or ₹2 lakh fine. |
+| 4. Publishing Obscene Content | Posting or sharing indecent images/videos online.                       | First offence: 5 years jail + ₹10 lakh fine.    |
+| 5. Phishing/Fraud             | Creating fake websites/emails to trick users into giving personal info. | Imprisonment up to 3 years and/or ₹1 lakh fine. |
+
+
+
+
